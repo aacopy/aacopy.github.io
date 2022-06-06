@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mpush-官方文档 | aacopy</title><meta name="keywords" content="Mpush"><meta name="author" content="cmyang"><meta name="copyright" content="cmyang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Mpush-官方文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mpush-官方文档">
+<meta property="og:url" content="http://www.aacopy.cn/2021/12/29/Mpush/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="aacopy">
+<meta property="og:description" content="Mpush-官方文档">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.aacopy.cn/images/common/mpush.png">
+<meta property="article:published_time" content="2021-12-29T11:44:00.000Z">
+<meta property="article:modified_time" content="2022-06-06T13:16:56.180Z">
+<meta property="article:author" content="cmyang">
+<meta property="article:tag" content="Mpush">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.aacopy.cn/images/common/mpush.png"><link rel="shortcut icon" href="/images/common/favicon.png"><link rel="canonical" href="http://www.aacopy.cn/2021/12/29/Mpush/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Mpush-官方文档',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-06 21:16:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/common/header.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">96</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">aacopy</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Mpush-官方文档</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-29T11:44:00.000Z" title="发表于 2021-12-29 19:44:00">2021-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-06T13:16:56.180Z" title="更新于 2022-06-06 21:16:56">2022-06-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mpush/">Mpush</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Mpush-官方文档"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><article class="post-content" id="article-container"><p>由于官方文档<a target="_blank" rel="noopener" href="http://mpush.mydoc.io/%E7%BB%8F%E5%B8%B8%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%BF%99%E9%87%8C%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%8B%EF%BC%8C%E6%96%B9%E4%BE%BF%E6%9F%A5%E9%98%85%EF%BC%8C%E5%8E%9F%E5%A7%8B%E6%96%87%E6%A1%A3%EF%BC%8C%E6%9C%AA%E5%81%9A%E4%BB%BB%E4%BD%95%E6%94%B9%E5%8A%A8">http://mpush.mydoc.io/经常打不开，这里重新发布一下，方便查阅，原始文档，未做任何改动</a></p>
+<h3 id="系统介绍"><a href="#系统介绍" class="headerlink" title="系统介绍"></a>系统介绍</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/21113422_dBgn.png" alt="输入图片说明"></p>
+<blockquote>
+<p>基于Netty的开源实时消息推送系统</p>
+</blockquote>
+<h3 id="发展状况"><a href="#发展状况" class="headerlink" title="发展状况"></a>发展状况</h3><blockquote>
+<p>2015.12 项目启动<br>2016.2 1.0-beta<br>2016.3 1.0-release 上线<br>2016.5 开源预研,业务剥离<br>2016.8 正式开源v0.0.1<br>2016.9 v0.0.2, v0.0.3<br>2016.10 v0.0.4, v0.0.5<br>2016.11 v0.0.6<br>2016.12 v0.6.1<br>2017.1 v0.7.0<br>2017.2 v0.7.1<br>2017.8 v0.8.0</p>
+</blockquote>
+<h3 id="后续目标"><a href="#后续目标" class="headerlink" title="后续目标"></a>后续目标</h3><p>因为Java的开源消息系统非常少，希望有兴趣的朋友可以一起参与进来，做一个最好的java开源消息推送系统。参与方式:<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/a8de24f8a845">如何参与Github开源项目</a></p>
+<h3 id="项目成员"><a href="#项目成员" class="headerlink" title="项目成员"></a>项目成员</h3><p>夜色[QQ:251939168]、黄志磊、魏永霖、老佛爷</p>
+<h3 id="帮助与支持"><a href="#帮助与支持" class="headerlink" title="帮助与支持"></a>帮助与支持</h3><p>QQ群: 114583699</p>
+<h3 id="捐助"><a href="#捐助" class="headerlink" title="捐助"></a>捐助</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/09152814_k2YZ.png" alt="捐助"></p>
+<h3 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h3><ol>
+<li>源码全部开放，包括server、android、ios 等</li>
+<li>代码质量高，全部模块化设计，真正的商用级产品，考虑到推送中遇到的大部分场景</li>
+<li>安全性高，基于RSA精简的加密握手协议，简单，高效，安全</li>
+<li>支持断线重连，及弱网下的快速重连，无网络下自动休眠节省电量和资源</li>
+<li>协议简洁，接口流畅，支持数据压缩，更加节省流量</li>
+<li>支持集群部署，支持负载均衡，基于成熟的zookeeper实现</li>
+<li>用户路由使用redis集群，支持单写，双写，集群分组；性能好，可用性高</li>
+<li>支持http代理，一根TCP链接接管应用大部分请求，让http请求更加及时</li>
+<li>高度可配置化，基本上通过修改配置可满足大部分场景</li>
+<li>扩展性强，高度模块化，基于SPI模式的可拔插设计，以满足特殊需求</li>
+<li>监控完善，日志详细，可快速排查线上问题及服务调优</li>
+</ol>
+<h2 id="第二章-快速上手"><a href="#第二章-快速上手" class="headerlink" title="第二章 快速上手"></a>第二章 快速上手</h2><h3 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h3><h3 id="Github源码"><a href="#Github源码" class="headerlink" title="Github源码"></a>Github源码</h3><ul>
+<li>group <a target="_blank" rel="noopener" href="https://github.com/mpusher/">https://github.com/mpusher/</a> 源代码空间</li>
+<li>server <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush">https://github.com/mpusher/mpush</a> 服务端源码</li>
+<li>alloc <a target="_blank" rel="noopener" href="https://github.com/mpusher/alloc">https://github.com/mpusher/alloc</a> 调度器源码</li>
+<li>mpns <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpns">https://github.com/mpusher/mpns</a> 个性化推送中心源码</li>
+<li>java-client <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush-client-java">https://github.com/mpusher/mpush-client-java</a> 纯java客户端源码</li>
+<li>android sdk&amp;demo <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush-android">https://github.com/mpusher/mpush-android</a> 安卓SDK和DEMO源码</li>
+<li>IOS sdk(swift) <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush-client-swift">https://github.com/mpusher/mpush-client-swift</a> swift版客户端源码</li>
+<li>IOS sdk(OC) <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush-client-oc">https://github.com/mpusher/mpush-client-oc</a> Object C 客户端源码</li>
+<li>websoket(JS) <a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush-client-js">https://github.com/mpusher/mpush-client-js</a> websocket js 客户端源码</li>
+</ul>
+<h3 id="码云源码"><a href="#码云源码" class="headerlink" title="码云源码"></a>码云源码</h3><ul>
+<li>group <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush">http://git.oschina.net/mpush</a> 源代码空间</li>
+<li>server <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush/mpush">http://git.oschina.net/mpush/mpush</a> 服务端源码</li>
+<li>alloc <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush/alloc">http://git.oschina.net/mpush/alloc</a> 调度器源码</li>
+<li>java-client <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush/mpush-client-java">http://git.oschina.net/mpush/mpush-client-java</a> 纯java客户端源码</li>
+<li>android sdk&amp;demo <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush/mpush-android">http://git.oschina.net/mpush/mpush-android</a> 安卓SDK和DEMO源码</li>
+<li>IOS sdk(swift) <a target="_blank" rel="noopener" href="http://git.oschina.net/mpush/mpush-client-swift">http://git.oschina.net/mpush/mpush-client-swift</a> swift版客户端源码</li>
+</ul>
+<h3 id="服务部署"><a href="#服务部署" class="headerlink" title="服务部署"></a>服务部署</h3><h3 id="部署提示："><a href="#部署提示：" class="headerlink" title="部署提示："></a>部署提示：</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/mywiki/mpush-doc/blob/master/SUMMARY.md">详细部署文档请点此查看</a>，以下仅仅是mpush server 本身的部署</li>
+<li>mpush 服务只依赖于zookeeper和redis，当然还有JDK&gt;=1.8</li>
+</ol>
+<h3 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h3><ol>
+<li>安装<code>jdk 1.8</code> 以上版本并设置<code>%JAVA_HOME％</code></li>
+<li>安装<code>zookeeper</code> (安装配置步骤略)</li>
+<li>安装<code>Redis</code> (安装配置步骤略)</li>
+<li>下载<code>mpush server</code>最新的正式包<a target="_blank" rel="noopener" href="https://github.com/mpusher/mpush/releases">https://github.com/mpusher/mpush/releases</a><br>(也可以自己根据源码构建:<code>mvn clean package -Pzip,pub</code>)</li>
+<li>解压下载的tar包<code>tar -zvxf mpush-release-x.y.z.tar.gz</code>到 mpush 目录, 结构如下</li>
+</ol>
+<p>&gt;drwxrwxr-x 2 shinemo shinemo 4096 Aug 20 09:30 bin —&gt; 启动脚本<br>&gt;drwxrwxr-x 2 shinemo shinemo 4096 Aug 20 09:52 conf —&gt; 配置文件<br>&gt;drwxrwxr-x 2 shinemo shinemo 4096 Aug 20 09:29 lib —&gt; 核心类库<br>&gt;drwxrwxr-x 1 shinemo shinemo 1357 May 31 11:07 LICENSE<br>&gt;drwxrwxr-x 2 shinemo shinemo 4096 Aug 20 09:32 logs —&gt; 日志目录<br>&gt;drwxrwxr-x 1 shinemo shinemo 4096 May 31 11:07 README.md<br>&gt;drwxrwxr-x 2 shinemo shinemo 4096 Aug 20 09:52 tmp</p>
+<ol>
+<li><p>修改 conf 目录下的 <code>vi mpush.conf</code>文件, <code>mpush.conf</code>里的配置项会覆盖同目录下的<code>reference.conf</code>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> mp.log.level=debug</span><br><span class="line"> mp.core.min-heartbeat=10s</span><br><span class="line"> mp.core.max-heartbeat=10s</span><br><span class="line"> mp.core.compress-threshold=10k //启用压缩阀值</span><br><span class="line"> mp.zk.server-address=&quot;127.0.0.1:2181&quot; //zookeeper地址</span><br><span class="line"> mp.redis &#123;// redis 集群配置</span><br><span class="line">nodes:[&quot;127.0.0.1:6379&quot;]//格式是ip:port,密码可以没有ip:port</span><br><span class="line"> &#125;</span><br><span class="line"> mp.http.proxy-enabled=true //启用http代理</span><br><span class="line"> mp.net.gateway-server-net=udp //网关服务使用的网络类型tcp/udp</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<p>如果要修改其他配置请参照</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reference.conf</span><br></pre></td></tr></table></figure>
+
+<p>文件</p>
+</li>
+<li><p>给bin目录下的脚本增加执行权限<code>chmod u+x *.sh</code></p>
+</li>
+<li><p>执行<code>./mp.sh start</code> 启动服务, 查看帮助<code>./mp.sh</code> 目前支持的命令：</p>
+</li>
+</ol>
+<p>&gt;<code>Usage: ./mp.sh &#123;start|start-foreground|stop|restart|status|upgrade|print-cmd&#125;</code><br>&gt;<br>&gt;<code>set-env.sh</code>用于增加和修改jvm启动参数，比如堆内存、开启远程调试端口、开启jmx等</p>
+<ol>
+<li><code>cd logs</code>目录，<code>cat mpush.out</code>查看服务是否启动成功</li>
+</ol>
+<h3 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h3><ol>
+<li>添加Maven依赖到工程</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;com.github.mpusher&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mpush-boot&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.y.z&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li>启动入口类 <code>com.mpush.bootstrap.ServerLauncher.java</code><br>&gt;启动调用 start 方法，停止调用 stop 方法</li>
+<li>在工程里添加classpath下添加<code>application.conf</code>配置文件，配置方式参照<a target="_blank" rel="noopener" href="http://mpush.mydoc.io/?v=24639&t=134336">服务部署</a>第6点</li>
+<li>spring bean 方式配置</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean class=&quot;com.mpush.bootstrap.ServerLauncher&quot; init-method=&quot;start&quot; destroy-method=&quot;stop&quot;/&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="源码测试"><a href="#源码测试" class="headerlink" title="源码测试"></a>源码测试</h3><ol>
+<li><p><code>git clone https://github.com/mpusher/mpush.git</code></p>
+</li>
+<li><p>导入到eclipse或Intellij IDEA</p>
+</li>
+<li><p>打开<code>mpush-test</code>模块，所有的测试代码都在该模块下</p>
+</li>
+<li><p>如果没有安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">     </span><br></pre></td></tr></table></figure>
+
+<p>java</p>
+<p>com.mpush.test.spi.SimpleCacheMangerFactory //模拟Redis</p>
+<p>com.mpush.test.spi.SimpleMQClientFactory //模拟MQ pub/sub</p>
+<p>com.mpush.test.spi.SimpleRegistryFactory //模拟ZK服务注册</p>
+<p>com.mpush.test.spi.SimpleDiscoveryFactory //模拟ZK服务发现</p>
+<p>```</p>
+</li>
+<li><p>修改配置文件<code>src/test/resource/application.conf</code>文件修改方式参照<a target="_blank" rel="noopener" href="http://mpush.mydoc.io/?v=24639&t=134336">服务部署</a>第6点</p>
+</li>
+<li><p>运行<code>com.mpush.test.sever.ServerTestMain.java</code>启动长链接服务</p>
+</li>
+<li><p>运行<code>com.mpush.test.client.ConnClientTestMain.java</code> 模拟一个客户端</p>
+</li>
+<li><p>运行<code>com.mpush.test.push.PushClientTestMain.java</code> 模拟给用户下发消息</p>
+</li>
+<li><p>可以在控制台观察日志看服务是否正常运行，消息是否下发成功</p>
+</li>
+<li><p>websocket 客户端测试地址 <code>http://127.0.0.1:8080/index.html</code></p>
+</li>
+<li><p>alloc 启动入口 <code>com.shinemo.mpush.alloc.AllocServerMainTest.java</code></p>
+</li>
+</ol>
+<h2 id="第三章-架构分析"><a href="#第三章-架构分析" class="headerlink" title="第三章 架构分析"></a>第三章 架构分析</h2><h3 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/29215003_BWQU.png" alt="架构图"></p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>最左侧三大组件分别是日志系统、监控系统、控制台治理服务</li>
+</ol>
+<ul>
+<li>Log System 主要负责业务日志大输出，主要有链接相关日志、推送链路日志、心跳日志、监控日志等</li>
+<li>Monitor 主要用作系统状态监控，可用于系统调优，包括jvm内存，线程，线程池，系统堆栈，垃圾回收情况，内存泄漏情况等。</li>
+<li>AdminServer主要用于在控制台对单台机器进行控制与探查，比如参看连接数量，在线用户数，取消本级ZK注册，关闭服务等</li>
+</ul>
+<ol>
+<li>右侧三个分别是ZK服务，配置中心和安全工具箱</li>
+</ol>
+<ul>
+<li>ZK Client 主要负责注册长链接ip:port,网关ip:port以及监听各个节点变化，同时增加了缓存</li>
+<li>ConfigCenter 是MPUSH Server 配置化的关键，贯穿到各个模块，非常重要</li>
+<li>Sercutity Box 主要实现了RSA加密，DES加密，会话密钥生成及Session复用(用于快速重连)</li>
+</ul>
+<ol>
+<li>Core模块分别是长链接服务，网关服务，Packet编解码及分发模块，Message序列化及处理模块</li>
+</ol>
+<ul>
+<li>ConnectServer用于维持和客户端之间的TCP通道，主要负责和客户端交互</li>
+<li>GatewayServer用于处理Mpush Server之间的消息交互比如踢人，发送PUSH</li>
+<li>Packet主要是协议部分的编解码和包的完整性校验，最大长度校验等</li>
+<li>PacketReceiver主要负责消息的分发，分发是根据Command来的</li>
+<li>Connection/ConnectionManager主要负责链接管理，定时检查链接空闲情况，是否读写超时，如果链接断开发出相应的事件给路由中心去处理</li>
+<li>Message部分是整个的业务核心处理了处理消息的序列化，还有压缩、加密等，MessageHandler会根据不同消息独立处理自己所属的业务，主要有：心跳响应、握手及密钥交换、快速重连、绑定/解绑用户、http代理、消息推送等</li>
+</ul>
+<ol>
+<li>路由中心主要包括：本地路由，远程路由，用户在线管理三大块</li>
+</ol>
+<ul>
+<li>LocalRouterManager负责维护用户＋设备与链接(connection)之间的关系</li>
+<li>RemoteRouterManager负责维护用户＋设备与链接所在机器IP之间的关系</li>
+<li>UserManager主要处理用户上下线事件的广播，以及单台机器的在线用户及数量的维护和查询</li>
+</ul>
+<ol>
+<li>是MPUSH的缓存部分，目前只支持Redis,支持双写，主备，hash 等特性</li>
+</ol>
+<h3 id="服务依赖关系"><a href="#服务依赖关系" class="headerlink" title="服务依赖关系"></a>服务依赖关系</h3><h3 id="系统调用关系图"><a href="#系统调用关系图" class="headerlink" title="系统调用关系图"></a>系统调用关系图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/29222817_jMc7.png" alt="系统调用关系图"></p>
+<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>业务系统是要发送业务消息的服务，所有要推送的消息直接转给MPNS</li>
+<li>MPNS是我们的业务推送系统，负责消息推送，长链接的检查，离线消息存储，用户打标等</li>
+<li>APNS、JPUSH、MPUSH等分别是我们的客户端已经接入的推送系统</li>
+<li>MPNS主要是为了隔离业务系统和各种推送系统，用户使用哪个长链接服务，业务系统不需要感知，统一有MPNS去选择、去切换</li>
+<li>Alloc负责调度维护MPushServer集群，提供查询可用机器列表的接口，详细参见[Alloc实现]</li>
+</ol>
+<h3 id="协议格式"><a href="#协议格式" class="headerlink" title="协议格式"></a>协议格式</h3><h3 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h3><ul>
+<li>mpush使用的为自定义私有协议，定长Header + body, 其中header部分固定13个字节。</li>
+<li>心跳固定为一个字节，值为 -33。</li>
+</ul>
+<h3 id="Header-说明"><a href="#Header-说明" class="headerlink" title="Header 说明"></a>Header 说明</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>长度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>int</td>
+<td>4</td>
+<td>表示body的长度</td>
+</tr>
+<tr>
+<td>cmd</td>
+<td>byte</td>
+<td>1</td>
+<td>表示消息协议类型</td>
+</tr>
+<tr>
+<td>checkcode</td>
+<td>short</td>
+<td>2</td>
+<td>是根据body生成的一个校验码</td>
+</tr>
+<tr>
+<td>flags</td>
+<td>byte</td>
+<td>1</td>
+<td>表示当前包启用的特性，比如是否启用加密，是否启用压缩</td>
+</tr>
+<tr>
+<td>sessionId</td>
+<td>int</td>
+<td>4</td>
+<td>消息会话标识用于消息响应</td>
+</tr>
+<tr>
+<td>lrc</td>
+<td>byte</td>
+<td>1</td>
+<td>纵向冗余校验，用于校验header</td>
+</tr>
+</tbody></table>
+<h3 id="消息类型"><a href="#消息类型" class="headerlink" title="消息类型"></a>消息类型</h3><h3 id="mpush-目前支持如下消息类型"><a href="#mpush-目前支持如下消息类型" class="headerlink" title="mpush 目前支持如下消息类型"></a>mpush 目前支持如下消息类型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public enum Command &#123;</span><br><span class="line">    HEARTBEAT(1),          // 心跳</span><br><span class="line">    HANDSHAKE(2),          // 握手</span><br><span class="line">    LOGIN(3),</span><br><span class="line">    LOGOUT(4),</span><br><span class="line">    BIND(5),               // 绑定用户</span><br><span class="line">    UNBIND(6),             // 解绑用户</span><br><span class="line">    FAST_CONNECT(7),       // 快速重连</span><br><span class="line">    PAUSE(8),</span><br><span class="line">    RESUME(9),</span><br><span class="line">    ERROR(10),             // 错误消息</span><br><span class="line">    OK(11),                // 成功消息</span><br><span class="line">    HTTP_PROXY(12),        // HTTP代理</span><br><span class="line">    KICK(13),              // 踢人</span><br><span class="line">    GATEWAY_KICK(14),</span><br><span class="line">    PUSH(15),              // 推送</span><br><span class="line">    GATEWAY_PUSH(16),</span><br><span class="line">    NOTIFICATION(17),</span><br><span class="line">    GATEWAY_NOTIFICATION(18),</span><br><span class="line">    CHAT(19),</span><br><span class="line">    GATEWAY_CHAT(20),</span><br><span class="line">    GROUP(21),</span><br><span class="line">    GATEWAY_GROUP(22),</span><br><span class="line">    ACK(23),</span><br><span class="line">    UNKNOWN(-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br></pre></td><td class="code"><pre><span class="line">##################################################################################################################</span><br><span class="line">#</span><br><span class="line"># NOTICE：</span><br><span class="line">#</span><br><span class="line"># 系统配置文件，所有列出的项是系统所支持全部配置项</span><br><span class="line"># 如果要覆盖某项的值可以添加到mpush.conf中。</span><br><span class="line">#</span><br><span class="line"># 配置文件格式采用HOCON格式。解析库由https://github.com/typesafehub/config提供。</span><br><span class="line"># 具体可参照器说明文档，比如含有特殊字符的字符串必须用双引号包起来。</span><br><span class="line">#</span><br><span class="line">##################################################################################################################</span><br><span class="line"></span><br><span class="line">mp &#123;</span><br><span class="line">    #基础配置</span><br><span class="line">    home=$&#123;user.dir&#125; //程序工作目前</span><br><span class="line"></span><br><span class="line">    #日志配置</span><br><span class="line">    log-level=warn</span><br><span class="line">    log-dir=$&#123;mp.home&#125;/logs</span><br><span class="line">    log-conf-path=$&#123;mp.home&#125;/conf/logback.xml</span><br><span class="line"></span><br><span class="line">    #核心配置</span><br><span class="line">    core &#123;</span><br><span class="line">        max-packet-size=10k //系统允许传输的最大包的大小</span><br><span class="line">        compress-threshold=10k //数据包启用压缩的临界值，超过该值后对数据进行压缩</span><br><span class="line">        min-heartbeat=3m //最小心跳间隔</span><br><span class="line">        max-heartbeat=3m //最大心跳间隔</span><br><span class="line">        max-hb-timeout-times=2 //允许的心跳连续超时的最大次数</span><br><span class="line">        session-expired-time=1d //用于快速重连的session 过期时间默认1天</span><br><span class="line">        epoll-provider=netty //nio:jdk自带，netty:由netty实现</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #安全配置</span><br><span class="line">    security &#123;</span><br><span class="line">        #rsa 私钥、公钥key长度为1024;可以使用脚本bin/rsa.sh生成, @see com.mpush.tools.crypto.RSAUtils#main</span><br><span class="line">        private-key=&quot;MIIBNgIBADANBgkqhkiG9w0BAQEFAASCASAwggEcAgEAAoGBAKCE8JYKhsbydMPbiO7BJVq1pbuJWJHFxOR7L8Hv3ZVkSG4eNC8DdwAmDHYu/wadfw0ihKFm2gKDcLHp5yz5UQ8PZ8FyDYvgkrvGV0ak4nc40QDJWws621dm01e/INlGKOIStAAsxOityCLv0zm5Vf3+My/YaBvZcB5mGUsPbx8fAgEAAoGAAy0+WanRqwRHXUzt89OsupPXuNNqBlCEqgTqGAt4Nimq6Ur9u2R1KXKXUotxjp71Ubw6JbuUWvJg+5Rmd9RjT0HOUEQF3rvzEepKtaraPhV5ejEIrB+nJWNfGye4yzLdfEXJBGUQzrG+wNe13izfRNXI4dN/6Q5npzqaqv0E1CkCAQACAQACAQACAQACAQA=&quot;</span><br><span class="line">        public-key=&quot;MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCghPCWCobG8nTD24juwSVataW7iViRxcTkey/B792VZEhuHjQvA3cAJgx2Lv8GnX8NIoShZtoCg3Cx6ecs+VEPD2fBcg2L4JK7xldGpOJ3ONEAyVsLOttXZtNXvyDZRijiErQALMTorcgi79M5uVX9/jMv2Ggb2XAeZhlLD28fHwIDAQAB&quot;</span><br><span class="line">        aes-key-length=16 //AES key 长度</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #网络配置</span><br><span class="line">    net &#123;</span><br><span class="line">        connect-server-port=3000 //长链接服务对外端口, 公网端口</span><br><span class="line">        admin-server-port=3002 //控制台服务端口, 内部端口</span><br><span class="line">        gateway-server-port=3001 //网关服务端口, 内部端口</span><br><span class="line">        gateway-client-port=4000 //UDP 客户端端口</span><br><span class="line">        gateway-server-net=udp //网关服务使用的网络类型tcp/udp</span><br><span class="line">        gateway-server-multicast=&quot;239.239.239.88&quot; //239.0.0.0～239.255.255.255为本地管理组播地址，仅在特定的本地范围内有效</span><br><span class="line">        gateway-client-multicast=&quot;239.239.239.99&quot; //239.0.0.0～239.255.255.255为本地管理组播地址，仅在特定的本地范围内有效</span><br><span class="line">        public-host-mapping &#123; //本机局域网IP和公网IP的映射关系</span><br><span class="line">            //&quot;10.0.10.156&quot;:&quot;111.1.32.137&quot;</span><br><span class="line">            //&quot;10.0.10.166&quot;:&quot;111.1.33.138&quot;</span><br><span class="line">        &#125;</span><br><span class="line">        traffic-shaping &#123; //流量整形配置</span><br><span class="line">            gateway-client &#123;</span><br><span class="line">                enabled:true</span><br><span class="line">                check-interval:100ms</span><br><span class="line">                write-global-limit:30k</span><br><span class="line">                read-global-limit:0</span><br><span class="line">                write-channel-limit:3k</span><br><span class="line">                read-channel-limit:0</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            gateway-server &#123;</span><br><span class="line">                enabled:true</span><br><span class="line">                check-interval:100ms</span><br><span class="line">                write-global-limit:0</span><br><span class="line">                read-global-limit:30k</span><br><span class="line">                write-channel-limit:0</span><br><span class="line">                read-channel-limit:3k</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            connect-server &#123;</span><br><span class="line">                enabled:false</span><br><span class="line">                check-interval:100ms</span><br><span class="line">                write-global-limit:0</span><br><span class="line">                read-global-limit:100k</span><br><span class="line">                write-channel-limit:3k</span><br><span class="line">                read-channel-limit:3k</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #Zookeeper配置</span><br><span class="line">    zk &#123;</span><br><span class="line">        server-address=&quot;127.0.0.1:2181&quot;</span><br><span class="line">        namespace=mpush</span><br><span class="line">        digest=mpush //zkCli.sh acl 命令 addauth digest mpush</span><br><span class="line">        local-cache-path=/</span><br><span class="line">        retry &#123;</span><br><span class="line">            #initial amount of time to wait between retries</span><br><span class="line">            baseSleepTimeMs=3s</span><br><span class="line">            #max number of times to retry</span><br><span class="line">            maxRetries=3</span><br><span class="line">            #max time in ms to sleep on each retry</span><br><span class="line">            maxSleepMs=5s</span><br><span class="line">        &#125;</span><br><span class="line">        connectionTimeoutMs=5s</span><br><span class="line">        sessionTimeoutMs=5s</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #Redis集群配置</span><br><span class="line">    redis &#123;</span><br><span class="line">        write-to-zk=false</span><br><span class="line">        password=&quot;&quot;//your password</span><br><span class="line">        cluster-model=single//single,cluster</span><br><span class="line">        nodes:[]//[&quot;127.0.0.1:6379&quot;]格式ip:port:password,密码可以不设置ip:port</span><br><span class="line">        config &#123;</span><br><span class="line">            maxTotal:8,</span><br><span class="line">            maxIdle:4,</span><br><span class="line">            minIdle:1,</span><br><span class="line">            lifo:true,</span><br><span class="line">            fairness:false,</span><br><span class="line">            maxWaitMillis:5000,</span><br><span class="line">            minEvictableIdleTimeMillis:300000,</span><br><span class="line">            softMinEvictableIdleTimeMillis:1800000,</span><br><span class="line">            numTestsPerEvictionRun:3,</span><br><span class="line">            testOnCreate:false,</span><br><span class="line">            testOnBorrow:false,</span><br><span class="line">            testOnReturn:false,</span><br><span class="line">            testWhileIdle:false,</span><br><span class="line">            timeBetweenEvictionRunsMillis:60000,</span><br><span class="line">            blockWhenExhausted:true,</span><br><span class="line">            jmxEnabled:false,</span><br><span class="line">            jmxNamePrefix:pool,</span><br><span class="line">            jmxNameBase:pool</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #HTTP代理配置</span><br><span class="line">    http &#123;</span><br><span class="line">        proxy-enabled=false //启用Http代理</span><br><span class="line">        max-conn-per-host=5 //每个域名的最大链接数, 建议web服务nginx超时时间设长一点, 以便保持长链接</span><br><span class="line">        default-read-timeout=10s //请求超时时间</span><br><span class="line">        max-content-length=5m //response body 最大大小</span><br><span class="line">        dns-mapping &#123; //域名映射外网地址转内部IP, 域名部分不包含端口号</span><br><span class="line">            //&quot;mpush.com&quot;:[&quot;127.0.0.1:8080&quot;, &quot;127.0.0.1:8081&quot;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #线程池配置</span><br><span class="line">    thread &#123;</span><br><span class="line">        pool &#123;</span><br><span class="line">            boss &#123; //netty server boss</span><br><span class="line">                min:1 //boss 只需要一个线程即可</span><br><span class="line">                max:1</span><br><span class="line">                queue-size:0</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            work &#123; //netty server boss</span><br><span class="line">                min:0 //0表示线程数根据cpu核数动态调整(2*cpu)</span><br><span class="line">                max:0</span><br><span class="line">                queue-size:0</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            event-bus &#123;</span><br><span class="line">                min:4</span><br><span class="line">                max:4</span><br><span class="line">                queue-size:10000 //大量的online，offline，</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            http-proxy &#123;</span><br><span class="line">                min:0 //0表示线程数根据cpu核数动态调整(2*cpu)</span><br><span class="line">                max:0</span><br><span class="line">                queue-size:0</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            biz &#123; //其他业务</span><br><span class="line">                min:1</span><br><span class="line">                max:4</span><br><span class="line">                queue-size:16</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            mq &#123; //用户上下线消息, 踢人等</span><br><span class="line">                min:2</span><br><span class="line">                max:4</span><br><span class="line">                queue-size:10000</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            push-callback &#123; //消息推送</span><br><span class="line">                min:2</span><br><span class="line">                max:2</span><br><span class="line">                queue-size:0</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            push-center &#123; //消息推送</span><br><span class="line">                min:4</span><br><span class="line">                max:4</span><br><span class="line">                queue-size:0</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #推送消息流控</span><br><span class="line">    push &#123;</span><br><span class="line">       flow-control &#123; //qps = limit/(duration)</span><br><span class="line">            global:&#123; //针对非广播推送的流控，全局有效</span><br><span class="line">                limit:5000 //qps = 5000</span><br><span class="line">                max:0 //UN limit</span><br><span class="line">                duration:1s //1s</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            broadcast:&#123; //针对广播消息的流控，单次任务有效</span><br><span class="line">                limit:3000 //qps = 3000</span><br><span class="line">                max:100000 //10w</span><br><span class="line">                duration:1s //1s</span><br><span class="line">            &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #系统监控配置</span><br><span class="line">    monitor &#123;</span><br><span class="line">        dump-dir=$&#123;mp.home&#125;/tmp</span><br><span class="line">        dump-stack=false //是否定时dump堆栈</span><br><span class="line">        dump-period=1m  //多久监控一次</span><br><span class="line">        print-log=true //是否打印监控日志</span><br><span class="line">        profile-enabled=true //开启性能监控</span><br><span class="line">        profile-slowly-duration=10ms //耗时超过10ms打印日志</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #SPI扩展配置</span><br><span class="line">    spi &#123;</span><br><span class="line">        thread-pool-factory:&quot;com.mpush.tools.thread.pool.DefaultThreadPoolFactory&quot;</span><br><span class="line">        dns-mapping-manager:&quot;com.mpush.common.net.HttpProxyDnsMappingManager&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h3><h3 id="模块依赖关系图"><a href="#模块依赖关系图" class="headerlink" title="模块依赖关系图"></a>模块依赖关系图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/29224431_zx6f.jpg" alt="系统模块"></p>
+<h3 id="模块说明"><a href="#模块说明" class="headerlink" title="模块说明"></a>模块说明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```mpush-boot```：是服务端启动入口模块，主要控制server启动、停止流程</span><br><span class="line">```mpush-tools```：mpush用到的一些工具类，包括线程池，加密，配置文件解析等等</span><br><span class="line">```mpush-common```：定义了mpush-client模块和mpush-core模块都会用到的类，主要是消息、路由等</span><br></pre></td></tr></table></figure>
+
+<p><code>mpush-monitor</code>：服务监控模块主要监控JVM，线程池，JMX，服务状态统计，性能统计等</p>
+<h3 id="SPI定制化"><a href="#SPI定制化" class="headerlink" title="SPI定制化"></a>SPI定制化</h3><h3 id="什么是-建议直接百度java-spi-mpush-使用SPI的目的-肯定是为了扩展性，在不想修改源码的情况下，去替换系统原有的实现，代价最小也最灵活。-mpush目前支持的SPI列表-所有受支持的SPI都在mpuhs-api-ServerEventListenerFactory-BindValidatorFactory-ClientClassifierFactory-PushHandlerFactory-ExecutorFactory-CacheManagerFactory-MQClientFactory-ServiceRegistryFactory-ServiceDiscoveryFactory-PushListenerFactory-开发流程-新建一个maven工程，并加入mpush-api模块的依赖-实现要定制的接口和其对应的Factory-在resources目录下创建META-INF-services目录-创建名字为com-mpush-api-spi-xxx-XXXFactory-的文件，即对应的接口名"><a href="#什么是-建议直接百度java-spi-mpush-使用SPI的目的-肯定是为了扩展性，在不想修改源码的情况下，去替换系统原有的实现，代价最小也最灵活。-mpush目前支持的SPI列表-所有受支持的SPI都在mpuhs-api-ServerEventListenerFactory-BindValidatorFactory-ClientClassifierFactory-PushHandlerFactory-ExecutorFactory-CacheManagerFactory-MQClientFactory-ServiceRegistryFactory-ServiceDiscoveryFactory-PushListenerFactory-开发流程-新建一个maven工程，并加入mpush-api模块的依赖-实现要定制的接口和其对应的Factory-在resources目录下创建META-INF-services目录-创建名字为com-mpush-api-spi-xxx-XXXFactory-的文件，即对应的接口名" class="headerlink" title="什么是  建议直接百度java spi### mpush 使用SPI的目的    肯定是为了扩展性，在不想修改源码的情况下，去替换系统原有的实现，代价最小也最灵活。 ### mpush目前支持的SPI列表    __所有受支持的SPI都在mpuhs-api* ServerEventListenerFactory* BindValidatorFactory* ClientClassifierFactory* PushHandlerFactory* ExecutorFactory* CacheManagerFactory* MQClientFactory* ServiceRegistryFactory* ServiceDiscoveryFactory* PushListenerFactory### 开发流程 * 新建一个maven工程，并加入mpush-api模块的依赖 * 实现要定制的接口和其对应的Factory * 在resources目录下创建META-INF.services目录 * 创建名字为com.mpush.api.spi.xxx.XXXFactory```的文件，即对应的接口名"></a>什么是<code>  建议直接百度</code>java spi<code>### mpush 使用SPI的目的    肯定是为了扩展性，在不想修改源码的情况下，去替换系统原有的实现，代价最小也最灵活。 ### mpush目前支持的SPI列表    __所有受支持的SPI都在</code>mpuhs-api<code>* </code>ServerEventListenerFactory<code>* </code>BindValidatorFactory<code>* </code>ClientClassifierFactory<code>* </code>PushHandlerFactory<code>* </code>ExecutorFactory<code>* </code>CacheManagerFactory<code>* </code>MQClientFactory<code>* </code>ServiceRegistryFactory<code>* </code>ServiceDiscoveryFactory<code>* </code>PushListenerFactory<code>### 开发流程 * 新建一个maven工程，并加入mpush-api模块的依赖 * 实现要定制的接口和其对应的Factory * 在resources目录下创建META-INF.services目录 * 创建名字为</code>com.mpush.api.spi.xxx.XXXFactory```的文件，即对应的接口名</h3><ul>
+<li>文件的内容为实现类的全名(packageName+className)</li>
+<li>通过mvn打成jar包，并把其放到mpush/lib目录</li>
+<li>重启mpush server 就会优先加载用户提供的实现来覆盖原有的默认实现</li>
+</ul>
+<h2 id="第四章-深度进阶"><a href="#第四章-深度进阶" class="headerlink" title="第四章 深度进阶"></a>第四章 深度进阶</h2><h3 id="密钥交换"><a href="#密钥交换" class="headerlink" title="密钥交换"></a>密钥交换</h3><h3 id="交换方案"><a href="#交换方案" class="headerlink" title="交换方案"></a>交换方案</h3><ol>
+<li>算法上同时使用了非对称加密算法(RSA)和对称加密算法(AES)。</li>
+<li>在客户端预埋好由服务端生成好的公钥。</li>
+<li>客户端生成随机数R1，并通过RSA公钥加密后发送给服务端。</li>
+<li>服务端用RSA私钥解密客户端发送的数据取得R1,同时生成随机数R2,并以R1为Key使用AES加密R2然后把加密后的数据发送到客户端。</li>
+<li>客户端以R1为Key使用AES解密服务发送的数据取得R2</li>
+<li>此时客户端和服务的同时都拥有随机数R1、R2，然后使用相同的混淆算法生成会话密钥(sessionKey), 之后传输的数据都以此值作为AES加密的密钥。</li>
+</ol>
+<h3 id="交换流程"><a href="#交换流程" class="headerlink" title="交换流程"></a>交换流程</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/29235425_gXHU.png" alt="密钥交换流程图"></p>
+<h3 id="握手及快速重连"><a href="#握手及快速重连" class="headerlink" title="握手及快速重连"></a>握手及快速重连</h3><h3 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01184038_oHrJ.png" alt="握手快速重连"></p>
+<h3 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>tcp连接建立后，第一个消息就是握手或快速重连消息。</li>
+<li>Handshake的目的是为了生成会话密钥，同时会把生成好的密钥存储到redis，并把key返回给客户端，为快速重连使用</li>
+<li>FastConnect是基于Handshake生成的sessionId来配合使用的，目的是为了减少RSA加密的使用次数，特别是网络较差的情况，毕竟RSA加密想对还是比较耗时的，客户端只需把sessionId传给服务端，其就能从redis中取出上次会话信息，恢复到上次握手成功之后的会话状态，这个过程不需要任何加密和密钥交换，相对会比较快速。</li>
+</ol>
+<h3 id="给连接绑定用户"><a href="#给连接绑定用户" class="headerlink" title="给连接绑定用户"></a>给连接绑定用户</h3><h3 id="时序图-1"><a href="#时序图-1" class="headerlink" title="时序图"></a>时序图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01185848_Uf42.png" alt="给连接绑定用户"></p>
+<h3 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>握手成功后表示安全通道已经建立，但同时还要给连接设置用户甚至标签，只有这样业务才能更好的去识别用户（没有用户的业务是另外一回事）。</li>
+<li>设置用户非常简单，只需把其存储到session即可，但因为要支持集群的，就必须把用户的位置信息（或者叫路由信息）发布出去，让集群里的其他机器能够通过useId来查找用户的位置（在哪台机器），因为客户端的TCP连接在哪台机器，那么和这个客户端的所有数据传输都必须经过这台机器的这个连接！(很多同学会问为什么不把connection存储到redis)。</li>
+<li>路由中心有两部分组成：本地路由和远程路由，本地路由数据结构为userId-&gt;connection的map，数据存储在本机内存；远程路由数据结构为userId-&gt;connServer机器ip，数据存储在redis;所以要给一个用户发信息必须先查远程路由，找到用户在哪台机器，然后把消息发给这台机器，让其去本地路由查找connection并通过查找到的TCP连接把消息发给用户。</li>
+<li>MessageCenter之前使用的redis提供的pub/sub实现的，也可以自己搭建MQ来实现，最新版踢人已经不再使用pub/sub，而是直接使用udp网关实现。</li>
+<li>踢人：之所以会有踢人的情况是根据业务需要来的，有些业务系统是不允许同一个用户在多个设备同时在线的，或者只允许不同类型的终端同时在线，比如QQ,手机和PC可以同时在线，但同一个帐号在两台PC登录时其中一个肯定会被踢下线，mpush的踢人要表达的也是同一个意思。</li>
+<li>顺便提一下关于同时在线的策略，或者说端的类型的定义mpush已经支持SPI定制化。</li>
+</ol>
+<h3 id="消息推送流程"><a href="#消息推送流程" class="headerlink" title="消息推送流程"></a>消息推送流程</h3><h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01193442_ABeq.png" alt="消息推送流程"></p>
+<h3 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>PushSender是消息推送的入口，它的实现在mpush-client模块属于服务端SDK，主要包含有GatewayClient, RemoteRouterManager; RemoteRouterManager用于定位用户在哪台机器，有没有在线等，而GatewayClient用于把要发送的的业务消息发给用户TCP连接所在的机器。</li>
+<li>GatewayServer负责接收GatewayClient发送过来的消息，然后到LocalRouterManager查找用户的Connection，然后把消息交由其下发。</li>
+<li>ConnectionServer 负责维持所有连接到当前机器的客户端连接，所以消息最终还是尤其下发（图比较简单，但能表达核心流程）。</li>
+</ol>
+<h3 id="HTTP代理"><a href="#HTTP代理" class="headerlink" title="HTTP代理"></a>HTTP代理</h3><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>问题<br>&gt; 前面有提到过http代理这个东西，但很多人不知道这个东西该怎么用，或者说有什么用？以及在什么场景下使用？</li>
+<li>移动APP通信场景分析<br>&gt; 从使用的链接情况来看，一般可以分为两大类：TCP长链接，HTTP短链接；长链接用于消息推送或IM等场景，HTTP用于业务数据的查询或修改。虽然不是所有的APP都需要IM功能，但大多应用都需要消息推送功能。为了推送消息，APP必须维持一根长链接，但大部分时间除了心跳这根链接上是没多少消息在传输的，特别是非IM类的APP，因为这类应用并没大量的消息要不停的推送，维持长链接只是为了消息的及时到达，这势必造成了很大的资源浪费！</li>
+<li>解决方案</li>
+</ul>
+<p>&gt; 针对上述情况MPUSH提供了Http代理方案，目的一是充分利用push通道，而是提高数据传输效率节省电量，节省流量，提供比http更高的安全性。</p>
+<ul>
+<li>实现原理</li>
+</ul>
+<p>&gt; MPushClient 提供了一个叫<code>sendHttp</code>的方法，该方法用于把客户端原本要通过HTTP方式发送的请求，__全部通过PUSH通道转发__，实现整个链路的长链接化；通过这种方式应用大大减少Http短链接频繁的创建，不仅仅节省电量，经过测试证明请求时间比原来至少缩短一倍，而且MPush提供的还有数据压缩功能，对于比较大的数据还能大大节省流量(压缩率4-10倍)，更重要的是所有通过代理的数据都是加密后传输的，大大提高了安全性！</p>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><ul>
+<li>服务端</li>
+</ul>
+<ol>
+<li><p>修改<code>mpush.conf</code>增加<code>mp.http.proxy-enabled=true</code>启用http代理</p>
+</li>
+<li><p>修改<code>mpush.conf</code>增加<code>dns-mapping</code>配置，示例如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mp.http.dns-mapping=&#123;//域名映射外网地址转内部IP</span><br><span class="line">  &quot;api.jituancaiyun.com&quot;:[&quot;10.0.10.1:8080&quot;, &quot;10.0.10.2:8080&quot;]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>&gt; 说明：因为<code>mpush server</code>要做http代理转发，而客户端传过来的一般是域名比如<code>http://api.jituancaiyun.com/get/userInfo.json</code>为了不到公网上再绕一圈建议把mpush server 和业务服务(api.jituancaiyun.com)部署到同一个局域网，并增域名api.jituancaiyun.com到提供该服务的集群机器内网ip之间的一个映射，这样<code>mpush server</code>就可以通过局域网把请求转发到具体到业务服务，效率更高！</p>
+</li>
+</ol>
+<ul>
+<li>客户端</li>
+</ul>
+<ol>
+<li><p>设置<code>ClientConfig.setEnableHttpProxy(true)</code>来启用客户端代理。</p>
+</li>
+<li><p>通过<code>Client.sendHttp(HttpRequest request)</code>方法来发送请求。</p>
+<p>&gt; AndroidSDK通过<code>com.mpush.android.MPush#sendHttpProxy(HttpRequest request)</code>来发送比较合适。</p>
+</li>
+</ol>
+<h3 id="流程分析"><a href="#流程分析" class="headerlink" title="流程分析"></a>流程分析</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01195523_qymD.png" alt="http proxy 流程图"></p>
+<h3 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h3><ol>
+<li><code>Client</code>代表App业务比如查询用户信息的接口</li>
+<li><code>MPushApiProxy</code>是一个工具类用于负责处理当前请求是使用普通的HTTP还是使用MPush长链接通道，这个类在SDK中说不存在的，是我们公司内部的业务，实现起来也很简单，建议Android工程中增加这么一个角色，而不是到处直接去依赖Mpush的代码，方便以后解耦。</li>
+<li><code>MPushClient</code>这个SDK已经提供，用于把Http协议打包成mpush协议。</li>
+<li><code>HttpProxyHandler</code>__包括后面的几个组件都是服务端业务组件。__用于接收客户端传过来的请求并反解为Http协议，然后通过DNSMapping找到域名对应的局域网IP，再通过内置的HttpClient，把请求转发给业务WEB服务，并把业务服务的返回值(HttpResponse)打包成MPush协议发送到客户端。</li>
+<li><code>DNSMapping</code>负责通过域名解析成局域网IP，并具有负载均衡以及简单的健康检查功能(针对所配置的WEB服务)</li>
+<li><code>HttpClient</code>目前使用的是用<code>Netty</code>实现的全异步的一个<code>HttpClient</code>，负责通过http的方式请求业务服务。</li>
+<li>Nginx是业务服务，也可以是Tomcat，<strong>特别需要建议的是链接超时时间配置长一些。</strong></li>
+</ol>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>为什么要这样实现？因为这样做对原有的业务系统侵入特别低，如果<code>MPushApiProxy</code>这个组件设计的好，对于最两边的业务组件/服务(Client,Nginx)，对请求方式应该是无感知的，这个角色是无法区分到底请求是通过普通的Http方式发送出去的还是通过长链接代理的方式发送的！！！</p>
+<p><strong>另附上通过Http Proxy 实现双向通信交互图</strong></p>
+<p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01195617_S2ll.png" alt="Http Proxy 实现双向通信"></p>
+<h3 id="消息分发"><a href="#消息分发" class="headerlink" title="消息分发"></a>消息分发</h3><h3 id="消息序列化"><a href="#消息序列化" class="headerlink" title="消息序列化"></a>消息序列化</h3><h3 id="消息加密与压缩"><a href="#消息加密与压缩" class="headerlink" title="消息加密与压缩"></a>消息加密与压缩</h3><h3 id="线程池配置与定制"><a href="#线程池配置与定制" class="headerlink" title="线程池配置与定制"></a>线程池配置与定制</h3><h3 id="上行PUSH"><a href="#上行PUSH" class="headerlink" title="上行PUSH"></a>上行PUSH</h3><h3 id="接口产生背景"><a href="#接口产生背景" class="headerlink" title="接口产生背景"></a>接口产生背景</h3><p>作为一个纯粹推送系统，最初是没有发送上行消息接口的只有下行的消息，毕竟MPush不是IM系统。<br>后来在很多同学的要求下，就增加了此接口用于cleint上报消息。</p>
+<h3 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h3><ol>
+<li>此接口和服务端下行Push保持相同的协议，可以互发消息，默认服务端没有对消息做任何业务上的处理，收到后直接丢弃。</li>
+<li>同时MPush提供了SPI的方式来接管客户端发过来的消息，具体请参考<a target="_blank" rel="noopener" href="http://mpush.mydoc.io/?v=24639&t=134851">第三章 系统架构 - SPI定制化</a>。</li>
+<li>如果没有特殊需求客户端上行消息建议使用Http Proxy模式。</li>
+</ol>
+<h3 id="广播推送与流控"><a href="#广播推送与流控" class="headerlink" title="广播推送与流控"></a>广播推送与流控</h3><h3 id="什么是广播推送？"><a href="#什么是广播推送？" class="headerlink" title="什么是广播推送？"></a>什么是广播推送？</h3><p>按推送用户范围来划分，MPush目前支持三种方式的推送：<br>\1. 单用户推送，推送消息给指定的某个用户。<br>\2. 批量推送，业务自己圈定一批用户，推送同一条消息给圈定的用户。<br>\3. 全网推送，推送消息给所有的在线用户。<br>这里所说的广播推送指的就是第三种用户范围的推送。</p>
+<h3 id="为什么广播推送要控制流量？"><a href="#为什么广播推送要控制流量？" class="headerlink" title="为什么广播推送要控制流量？"></a>为什么广播推送要控制流量？</h3><p>因为要推送消息给全网在线用户，用户量可能非常大，为了防止瞬时流量过大，所有加了入了防过载保护：流量控制。</p>
+<h3 id="流量控制的使用"><a href="#流量控制的使用" class="headerlink" title="流量控制的使用"></a>流量控制的使用</h3><h4 id="1-单任务流量控制"><a href="#1-单任务流量控制" class="headerlink" title="1. 单任务流量控制"></a>1. 单任务流量控制</h4><h4 id="2-全局流量控制"><a href="#2-全局流量控制" class="headerlink" title="2. 全局流量控制"></a>2. 全局流量控制</h4><h3 id="广播推送条件过滤"><a href="#广播推送条件过滤" class="headerlink" title="广播推送条件过滤"></a>广播推送条件过滤</h3><h3 id="为什么要对用户进行过滤？"><a href="#为什么要对用户进行过滤？" class="headerlink" title="为什么要对用户进行过滤？"></a>为什么要对用户进行过滤？</h3><p>因为广播是针对所有在线用户，为了更精准的推送，必须对目标用户进行筛选，才能满足个性化的业务需求。</p>
+<h3 id="目前支持的筛选纬度"><a href="#目前支持的筛选纬度" class="headerlink" title="目前支持的筛选纬度"></a>目前支持的筛选纬度</h3><ol>
+<li><code>tag</code>：业务自己打的标签</li>
+<li><code>userId</code>：用户登录ID</li>
+<li><code>clientVersion</code>：客户端版本</li>
+<li><code>osName</code>：客户端系统平台</li>
+<li><code>osVersion</code>：客户端系统版本</li>
+</ol>
+<h3 id="目前支持的表达式"><a href="#目前支持的表达式" class="headerlink" title="目前支持的表达式"></a>目前支持的表达式</h3><p>目前只支持</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 使用用例</span><br><span class="line">具体请参照</span><br></pre></td></tr></table></figure>
+
+<p>com.mpush.api.push.PushContext.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 灰度20%的在线用户：</span><br></pre></td></tr></table></figure>
+
+<p>userId % 100 &lt; 20</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 包含test标签的用户：</span><br></pre></td></tr></table></figure>
+
+<p>tags!=null &amp;&amp; tags.indexOf(“test”)!=-1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 客户端版本号大于2.0的安卓用户：</span><br></pre></td></tr></table></figure>
+
+<p>clientVersion.indexOf(“android”)!=-1 &amp;&amp; clientVersion.replace(/[^\d]/g,””) &gt; 20```</p>
+<h3 id="消息ACK"><a href="#消息ACK" class="headerlink" title="消息ACK"></a>消息ACK</h3><h3 id="离线消息"><a href="#离线消息" class="headerlink" title="离线消息"></a>离线消息</h3><ol>
+<li>请参考<code>demo</code>工程<a target="_blank" rel="noopener" href="https://github.com/mpusher/mpns">https://github.com/mpusher/mpns</a></li>
+<li>用户上线后客户端如何推送(获取)离线消息</li>
+</ol>
+<p>&gt; 推荐采用拉取的方式，可以通过一个http接口，分页拉取</p>
+<h3 id="服务端启动流程分析"><a href="#服务端启动流程分析" class="headerlink" title="服务端启动流程分析"></a>服务端启动流程分析</h3><h3 id="日志模块性能优化"><a href="#日志模块性能优化" class="headerlink" title="日志模块性能优化"></a>日志模块性能优化</h3><h3 id="JVM监控与性能分析"><a href="#JVM监控与性能分析" class="headerlink" title="JVM监控与性能分析"></a>JVM监控与性能分析</h3><h2 id="第五章-关联服务"><a href="#第五章-关联服务" class="headerlink" title="第五章 关联服务"></a>第五章 关联服务</h2><h3 id="Alloc服务"><a href="#Alloc服务" class="headerlink" title="Alloc服务"></a>Alloc服务</h3><h3 id="alloc-的作用"><a href="#alloc-的作用" class="headerlink" title="alloc 的作用"></a>alloc 的作用</h3><blockquote>
+<ul>
+<li>alloc 是针对client提供的一个轻量级的负载均衡服务</li>
+<li>每次客户端在链接MPUSH server之前都要调用下该服务</li>
+<li>以获取可用的MPUSH server列表,然后按顺序去尝试建立TCP链接,直到链接建立成功</li>
+</ul>
+</blockquote>
+<h3 id="对外提供的接口定义"><a href="#对外提供的接口定义" class="headerlink" title="对外提供的接口定义"></a>对外提供的接口定义</h3><blockquote>
+<p>接口类型 ：HTTP</p>
+<p>Method :GET 参数 ：无 返回值格式 : ip:port,ip:port content-type : text/plain;charset=utf-8</p>
+</blockquote>
+<h3 id="服务部署-1"><a href="#服务部署-1" class="headerlink" title="服务部署"></a>服务部署</h3><ol>
+<li>下载alloc最新包<a target="_blank" rel="noopener" href="https://github.com/mpusher/alloc/releases">https://github.com/mpusher/alloc/releases</a></li>
+<li>解压下载的tar包<code>tar -zvxf alloc-release-x.x.x.tar.gz</code></li>
+<li>修改 conf 目录下的 <code>vi mpush.conf</code>文件, 修改方式参照<code>mpush server</code> 部署</li>
+<li>给bin目录下的脚本增加执行权限<code>chmod u+x *.sh</code></li>
+<li>执行<code>./mp.sh start</code> 启动服务, 查看帮助直接执行<code>./mp.sh</code></li>
+<li><code>cd logs</code>目录，<code>cat mpush.out</code>查看服务是否启动成功</li>
+</ol>
+<h3 id="客户端建立连接流程"><a href="#客户端建立连接流程" class="headerlink" title="客户端建立连接流程"></a>客户端建立连接流程</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01201926_2SMA.png" alt="mpush连接建立流程"></p>
+<h3 id="实现讲解"><a href="#实现讲解" class="headerlink" title="实现讲解"></a>实现讲解</h3><ol>
+<li>服务部署可以集成Tomcat或自己实现一个HttpServer比如基于Netty实现</li>
+<li>mpush server 集群列表可以从Zookeeper查询，目前提供的有ZK查询客户端</li>
+<li>如果要实现负载均衡可以考虑使用以下几种方式实现：</li>
+</ol>
+<p>&gt; 随机，每次从mpush server列表随机选取一个地址返回给客户端<br>&gt;<br>&gt; 轮播，每次把mpush server列表依次返回给客户端<br>&gt;<br>&gt; 按链接数量排序，链接数少的排最前面</p>
+<h3 id="Alloc服务存在的意义"><a href="#Alloc服务存在的意义" class="headerlink" title="Alloc服务存在的意义"></a>Alloc服务存在的意义</h3><p>刚开始看MPUSH的童鞋可能会有疑问，这玩意有什么用，为什么不直接连mpush server ?</p>
+<p>如果直连你可能遇到一些问题，比如你的mpush server 可能不止一台，你怎么去选择连哪一台？</p>
+<p>其中某台服务挂了怎么办？要更换机器又怎么办？这时你必然希望有一台前置服务来对整个mpush集群进行统一调度。</p>
+<h3 id="MPNS"><a href="#MPNS" class="headerlink" title="MPNS"></a>MPNS</h3><h3 id="个性化推送平台"><a href="#个性化推送平台" class="headerlink" title="个性化推送平台"></a>个性化推送平台</h3><h2 id="第六章-SDK接入"><a href="#第六章-SDK接入" class="headerlink" title="第六章 SDK接入"></a>第六章 SDK接入</h2><h3 id="服务端SDK"><a href="#服务端SDK" class="headerlink" title="服务端SDK"></a>服务端SDK</h3><h3 id="使用方式-1"><a href="#使用方式-1" class="headerlink" title="使用方式"></a>使用方式</h3><ol>
+<li><p>添加maven依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;com.github.mpusher&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mpush-client&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.y.z&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>在工程<code>resources</code>目录增加配置文件<code>application.conf</code>，并配置<code>zookeeper</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mp.zk.server-address=&quot;127.0.0.1:2181&quot;</span><br><span class="line">mp.redis.nodes=[&quot;127.0.0.1:6379&quot;]</span><br><span class="line">     </span><br></pre></td></tr></table></figure></li>
+<li><p>使用<code>com.mpush.api.push.PushSende.java</code>进行推送，使用其<code>create</code>方法创建服务，<code>start</code>方法启动服务，<code>stop</code>方法停止服务。推送接口定义如下：</p>
+<p>```java<br>public interface PushSender extends Service {</p>
+<p>/**<br>* 创建PushSender实例<br>*<br>* @return PushSender<br>*/<br>static PushSender create() {<br>return SpiLoader.load(PusherFactory.class).get();<br>}</p>
+<p>/**<br>* 推送push消息<br>*<br>* @param context 推送参数<br>* @return FutureTask 可用于同步调用<br>*/<br>FutureTask send(PushContext context);</p>
+<p>}<br>```</p>
+</li>
+</ol>
+<h3 id="推送流程"><a href="#推送流程" class="headerlink" title="推送流程"></a>推送流程</h3><h3 id="流程图-1"><a href="#流程图-1" class="headerlink" title="流程图"></a>流程图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01211537_dfNK.png" alt="推送流程"></p>
+<h3 id="流程分析-1"><a href="#流程分析-1" class="headerlink" title="流程分析"></a>流程分析</h3><ol>
+<li><code>PushSender</code>启动后首先从ZK里获取可用的<code>GatewayServer</code>列表，然后创建相应的<code>Client</code>分别连接到对应的<code>GatewayServer</code></li>
+<li>当调用<code>send</code>方法去推送时，<code>PushSender</code>首先会通过<code>RemoteRouterManager</code>查询要推送的用户当前所登录的机器IP，然后通过IP选择<code>GatewayServer</code>并通过第1中对应的<code>Client</code>把消息发送到该机器，因为该机器拥有用户的链接。</li>
+<li><code>GatewayServer</code>接收到<code>Client</code>发送过来的消息后，首先通过查询本地路由<code>LocalRouterManager</code>找到用户连接<code>Connection</code>，该链接是连接到<code>ConnectionServer</code>的。</li>
+<li>如果连接存在，<code>ConnectionServer</code>会通过此连接把消息下发到客户端。</li>
+<li>如果推送成功，<code>GatewayServer</code>会发送消息推送成功的消息给<code>PushSender</code>所持有的<code>Client</code></li>
+<li><code>PushSender</code>收到推送成功消息后，会通过<code>Callback#onSuccess</code>回调调用方，整个推送流程结束。</li>
+<li>如果中间有任何失败则回调<code>Callback#onFailure</code>。</li>
+<li>如果用户不在线则回调<code>Callback#onOffline</code>。</li>
+<li>如果在一定时间内<code>PushSender</code>没有收到<code>GatewayServer</code>响应的消息则推送超时，回调<code>Callback#onTimeout</code>通知调用方。</li>
+</ol>
+<h3 id="源码解读"><a href="#源码解读" class="headerlink" title="源码解读"></a>源码解读</h3><ol>
+<li><code>PushSender</code>的实现类为<code>com.mpush.client.push.PushClient.java</code></li>
+<li><code>PushClient</code>使用的是<code>ConnectionRouterManager</code>该类继承自<code>RemoteRouterManager</code>增加了本地缓存可在消息频繁时减轻<code>Redis</code>压力，但会存在一定情况的误判。</li>
+<li><code>com.mpush.client.push.PushRequestBus.java</code>用于维持异步推送任务，线程的调整可通过配置设置，任务的拒绝策略为__在调用线程执行Callback__。具体见<code>DefaultThreadPoolFactory.java</code>。线程池默认配置如下：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mp.thread.pool.push-client=2</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><code>GatewayClient</code>会根据<code>GatewayServer</code>的运行状态自行调整，如果有<code>GatewayServer</code>宕机对应的<code>Client</code>会及时销毁，如果有新的机器进来，对应<code>Client</code>也会自动创建。具体参见<code>GatewayConnectionFactory.java</code>。</li>
+</ol>
+<h3 id="MPushClient-Java"><a href="#MPushClient-Java" class="headerlink" title="MPushClient(Java)"></a>MPushClient(Java)</h3><h3 id="MPushClient-架构图"><a href="#MPushClient-架构图" class="headerlink" title="MPushClient 架构图"></a>MPushClient 架构图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01212400_lyC5.png" alt="mpushClient"></p>
+<h3 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h3><ol>
+<li><code>MpushClient</code>主要是为Android客户端设计，作为Android底层通信组件</li>
+<li><code>MpushClient</code>实现了所有Mpush的协议，也包加密，压缩等特性</li>
+<li><code>MpushClient</code>对SDK只暴露了3个对象：<code>Client、ClientConfig、ClientListener</code></li>
+<li><code>ClientConfig</code>提供了所有支持对配置设置项，所有的配置都必须使用此对象设置</li>
+<li><code>Client</code>主要暴露一些往服务端上行的方法，常用的有：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public interface MPushProtocol &#123;</span><br><span class="line"></span><br><span class="line">    boolean healthCheck();//健康检查，读写超时检查，发送心跳</span><br><span class="line"></span><br><span class="line">    void fastConnect();//快速重连</span><br><span class="line"></span><br><span class="line">    void handshake();//握手交互密钥</span><br><span class="line"></span><br><span class="line">    void bindUser(String userId);//绑定用户到链接</span><br><span class="line"></span><br><span class="line">    void unbindUser();//解绑</span><br><span class="line"></span><br><span class="line">    Future&lt;HttpResponse&gt; sendHttp(HttpRequest request);//发送HTTP代理亲求</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<ol>
+<li>所有服务端下行的消息都直接转交给<code>ClientListener</code>来处理:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public interface ClientListener &#123;</span><br><span class="line"></span><br><span class="line">    void onConnected(Client client);</span><br><span class="line"></span><br><span class="line">    void onDisConnected(Client client);</span><br><span class="line"></span><br><span class="line">    void onHandshakeOk(Client client, int heartbeat);</span><br><span class="line"></span><br><span class="line">    void onReceivePush(Client client, byte[] content);</span><br><span class="line"></span><br><span class="line">    void onKickUser(String deviceId, String userId);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<ol>
+<li>定时发送心跳部分的定时功能，<code>MpushClient</code>没有去实现，因为Android有比<code>Timer</code>更好的实现<code>AlarmManager</code>, 所以定时功能由SDK收到<code>onHandshakeOk</code>事件时去触发。</li>
+<li>内部组件主要有:<code>Connection、PacketReader、PacketWriter、PacketDispatcher、MessageHandler、ExecutorManager、AllotClient</code> 等</li>
+<li><code>Connection</code>负责TCP链接创建、维护、关闭、重连及校验读写超时时间等</li>
+<li><code>AllotClient</code>负责从<code>AllotServer</code>获取最新的MpushServer IP地址列表</li>
+<li><code>PacketReader</code> 负责数据包的解码及沾包、半包的处理，独占一个线程负责消息的读取。</li>
+<li><code>PacketWriter</code>负责数据发送数据内部维护一个只有一个线程的线程池，如果发送失败，会尝试重发直到超时。</li>
+<li><code>PacketReader、PacketWriter</code>内部还分别维护了一个<code>ByteBuf</code>使用的是堆外内存(<code>allocateDirect</code>)该buffer只分配一次后续一直重复使用，__避免反复的分配内存和垃圾回收__，这点对于客户端还是非常有意义的。</li>
+<li><code>PacketDispatcher</code>负责根据<code>Packet</code>的<code>Command</code>把包分发到相应的<code>MessageHander</code>。</li>
+<li><code>MessageHandler</code>主要负责把<code>Packet</code>反序列化为业务<code>Message</code>包括解码和解压，并处理相应的业务逻辑，比如触发下一步的请求，或通知<code>Listener</code>。</li>
+<li><code>ExecutorManager</code>负责整个客户端的线程、线程池的分配和销毁。</li>
+</ol>
+<h3 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h3><h3 id="系统架构图"><a href="#系统架构图" class="headerlink" title="系统架构图"></a>系统架构图</h3><p><img src="/images/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/01212307_WHqh.png" alt="Android SDK架构图"></p>
+<h3 id="说明-7"><a href="#说明-7" class="headerlink" title="说明"></a>说明</h3><ol>
+<li>整个图非常简单清晰的分为Server、SDK、BIZ三部分。</li>
+<li>MpushClient负责和server通信，屏蔽网络，协议，断线重连等所有和长链接相关的东西。</li>
+<li>MpushService是常驻服务，持有MpushClient,并把自身作为MpushClient的ClientListener，监听MpushClient的变化事件。</li>
+<li>MpushReceiver主要负责监听网络变化和AlarmManager，以便暂停和恢复推送服务以及健康检查。</li>
+<li>线1表示上行的请求，比如握手，心跳，绑定用户，业务HTTP代理请求等。</li>
+<li>线2表示下行响应或推送，比如握手成功，心跳响应，HTTP代理响应等。</li>
+<li>线3表示Client下发的事件，主要有：链接建立/断开，握手成功，收到PUSH，设备被踢下线等事件，其中PUSH和KICK_USER事件会广播出去，由业务(MyReceiver)接收；其他事件会通知给MpushReceiver以便其能更好的控制MpushClient的起停，而MpushService就比较轻量基本没有什么业务逻辑，只负责维持后台服务。</li>
+<li>线4表示由MpushService广播出去的PUSH消息，由于采用的是广播的形式，所有也可以分进程。</li>
+<li>线5表示消息有MyReceiver过滤处理后，转交给业务去显示或存DB等。</li>
+<li>线6表示业务可以直接调用MpushClient提供的接口发送消息，目前支持的有绑定usreId，发送Http请求等。</li>
+<li>线7表示一些不需要业务处理的消息都交由MpuhReceiver处理，比如握手成功后启动AlarmManager，当链接断开后取消AlarmManager。</li>
+<li>线8表示MpushReceiver接收到AlarmManager的提醒后去调用MpshClient的healthCheck方法发送心跳。</li>
+<li>线9表示MpushReceiver接收到网络变化后暂停或恢复MpushClient，这样做主要是为了省电，因为在网络断开后，MpushClient会去尝试重连而这时候去重连是没有意义的，因为没有网络。</li>
+</ol>
+<h3 id="MPushClient-Swift"><a href="#MPushClient-Swift" class="headerlink" title="MPushClient(Swift)"></a>MPushClient(Swift)</h3><p>架构同 MPushClient(java)</p>
+<h3 id="MPushClient-Obj-C"><a href="#MPushClient-Obj-C" class="headerlink" title="MPushClient(Obj-C)"></a>MPushClient(Obj-C)</h3><h2 id="第七张-常见问题"><a href="#第七张-常见问题" class="headerlink" title="第七张 常见问题"></a>第七张 常见问题</h2><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h3 id="1-修改配置文件为什么不生效？"><a href="#1-修改配置文件为什么不生效？" class="headerlink" title="1.修改配置文件为什么不生效？"></a>1.修改配置文件为什么不生效？</h3><p>如果是源码测试，请修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果是独立部署，请修改</span><br></pre></td></tr></table></figure>
+
+<p>conf/mpush.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请不要修改</span><br></pre></td></tr></table></figure>
+
+<p>reference.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###2.Alloc返回的外网地址不对</span><br><span class="line">  请在修改mpush server 里的</span><br></pre></td></tr></table></figure>
+
+<p>mpush.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">格式查考</span><br></pre></td></tr></table></figure>
+
+<p>reference.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###3.怎么开启http proxy?</span><br><span class="line">  请在</span><br></pre></td></tr></table></figure>
+
+<p>mpush.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###4. redis.clients.jedis.exceptions.JedisMovedDataException: MOVED 3456</span><br><span class="line"> 请设置redis为集群模式</span><br></pre></td></tr></table></figure>
+
+<p>mp.redis.cluster-model=cluster</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###5. 广播推送收不到推送的消息，指定用户发送能收到</span><br><span class="line"> 请修改网关模式为</span><br></pre></td></tr></table></figure>
+
+<p>mp.net.gateway-server-net=tcp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###6. 如何根据源码构建安装包？</span><br><span class="line">  构建命令为 </span><br></pre></td></tr></table></figure>
+
+<p>mvn clean package -Pzip,pub</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###7. Alloc源码启动报错</span><br><span class="line">   alloc 启动入口</span><br></pre></td></tr></table></figure>
+
+<p>com.shinemo.mpush.alloc.AllocServerMainTest.java</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">###8. PushSender推送建立连接超时</span><br><span class="line">   错误如下:</span><br></pre></td></tr></table></figure>
+
+<p>io.netty.channel.ConnectionTimeOutException:connection timed out: /xxx.xxx.xxx.xxx:3001```</p>
+<p>解决方式:<br>a.) 首先检查ip是否正确 telnet xxx.xxx.xxx.xxx 3001是否通<br>b.) 如果ip不正确增加配置mp.net.local-ip=“指定具体的ip”</p>
+<h3 id="9-get-gateway-connection-failure"><a href="#9-get-gateway-connection-failure" class="headerlink" title="9. get gateway connection failure"></a>9. get gateway connection failure</h3><p>如果使用mpush-client出现这个错误日志，建议检查下Guava的版本是否冲突。</p>
+<h3 id="10-如何生成RSA密钥对"><a href="#10-如何生成RSA密钥对" class="headerlink" title="10. 如何生成RSA密钥对"></a>10. 如何生成RSA密钥对</h3><p>1.) 安装<code>openssl</code><br>2.) 生成私钥 <code>openssl genrsa -out rsa_private_key.pem 1024</code><br>3.) 生成公钥 <code>openssl rsa -in rsa_private_key.pem -out rsa_public_key.pem -pubout</code><br>4.) 修改私钥格式 <code>openssl pkcs8 -topk8 -in rsa_private_key.pem -out rsa_private_key_pkcs8.pem -nocrypt</code><br>5.) 分别复制<code>rsa_public_key.pem</code>和<code>rsa_private_key_pkcs8.pem</code>中的内容(不包含<code>-----</code>开始的头尾两行，并去除其中的换行符）到<code>mpush.conf</code>配置文件里</p>
+<h3 id="系统压测"><a href="#系统压测" class="headerlink" title="系统压测"></a>系统压测</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">cmyang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.aacopy.cn/2021/12/29/Mpush/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">http://www.aacopy.cn/2021/12/29/Mpush/Mpush-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.aacopy.cn" target="_blank">aacopy</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Mpush/">Mpush</a></div><div class="post_share"><div class="social-share" data-image="/images/common/mpush.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/01/Mpush/Mpush-Server/"><img class="prev-cover" src="/images/common/mpush.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Mpush-Server</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/29/Util/VB-Excel%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/"><img class="next-cover" src="/images/common/vb.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VB-Excel发送邮件</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/01/01/Mpush/Mpush-Server/" title="Mpush-Server"><img class="cover" src="/images/common/mpush.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-01</div><div class="title">Mpush-Server</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">系统介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B1%95%E7%8A%B6%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text">发展状况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E7%9B%AE%E6%A0%87"><span class="toc-number">3.</span> <span class="toc-text">后续目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%88%90%E5%91%98"><span class="toc-number">4.</span> <span class="toc-text">项目成员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E4%B8%8E%E6%94%AF%E6%8C%81"><span class="toc-number">5.</span> <span class="toc-text">帮助与支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%90%E5%8A%A9"><span class="toc-number">6.</span> <span class="toc-text">捐助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E7%82%B9"><span class="toc-number">7.</span> <span class="toc-text">功能特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B"><span class="toc-number"></span> <span class="toc-text">第二章 快速上手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E5%9C%B0%E5%9D%80"><span class="toc-number">1.</span> <span class="toc-text">源码地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github%E6%BA%90%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">Github源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%81%E4%BA%91%E6%BA%90%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">码云源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text">服务部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%8F%90%E7%A4%BA%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">部署提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B"><span class="toc-number">6.</span> <span class="toc-text">部署流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91"><span class="toc-number">7.</span> <span class="toc-text">集成开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E6%B5%8B%E8%AF%95"><span class="toc-number">8.</span> <span class="toc-text">源码测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number"></span> <span class="toc-text">第三章 架构分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">系统架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB"><span class="toc-number">3.</span> <span class="toc-text">服务依赖关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-number">4.</span> <span class="toc-text">系统调用关系图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="toc-number">5.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE%E6%A0%BC%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">协议格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE%E8%AF%B4%E6%98%8E"><span class="toc-number">7.</span> <span class="toc-text">协议说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Header-%E8%AF%B4%E6%98%8E"><span class="toc-number">8.</span> <span class="toc-text">Header 说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B"><span class="toc-number">9.</span> <span class="toc-text">消息类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mpush-%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E5%A6%82%E4%B8%8B%E6%B6%88%E6%81%AF%E7%B1%BB%E5%9E%8B"><span class="toc-number">10.</span> <span class="toc-text">mpush 目前支持如下消息类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-number">11.</span> <span class="toc-text">系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">12.</span> <span class="toc-text">功能模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-number">13.</span> <span class="toc-text">模块依赖关系图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E8%AF%B4%E6%98%8E"><span class="toc-number">14.</span> <span class="toc-text">模块说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI%E5%AE%9A%E5%88%B6%E5%8C%96"><span class="toc-number">15.</span> <span class="toc-text">SPI定制化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-%E5%BB%BA%E8%AE%AE%E7%9B%B4%E6%8E%A5%E7%99%BE%E5%BA%A6java-spi-mpush-%E4%BD%BF%E7%94%A8SPI%E7%9A%84%E7%9B%AE%E7%9A%84-%E8%82%AF%E5%AE%9A%E6%98%AF%E4%B8%BA%E4%BA%86%E6%89%A9%E5%B1%95%E6%80%A7%EF%BC%8C%E5%9C%A8%E4%B8%8D%E6%83%B3%E4%BF%AE%E6%94%B9%E6%BA%90%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E5%8E%BB%E6%9B%BF%E6%8D%A2%E7%B3%BB%E7%BB%9F%E5%8E%9F%E6%9C%89%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%8C%E4%BB%A3%E4%BB%B7%E6%9C%80%E5%B0%8F%E4%B9%9F%E6%9C%80%E7%81%B5%E6%B4%BB%E3%80%82-mpush%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84SPI%E5%88%97%E8%A1%A8-%E6%89%80%E6%9C%89%E5%8F%97%E6%94%AF%E6%8C%81%E7%9A%84SPI%E9%83%BD%E5%9C%A8mpuhs-api-ServerEventListenerFactory-BindValidatorFactory-ClientClassifierFactory-PushHandlerFactory-ExecutorFactory-CacheManagerFactory-MQClientFactory-ServiceRegistryFactory-ServiceDiscoveryFactory-PushListenerFactory-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAmaven%E5%B7%A5%E7%A8%8B%EF%BC%8C%E5%B9%B6%E5%8A%A0%E5%85%A5mpush-api%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BE%9D%E8%B5%96-%E5%AE%9E%E7%8E%B0%E8%A6%81%E5%AE%9A%E5%88%B6%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%85%B6%E5%AF%B9%E5%BA%94%E7%9A%84Factory-%E5%9C%A8resources%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BAMETA-INF-services%E7%9B%AE%E5%BD%95-%E5%88%9B%E5%BB%BA%E5%90%8D%E5%AD%97%E4%B8%BAcom-mpush-api-spi-xxx-XXXFactory-%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E5%8D%B3%E5%AF%B9%E5%BA%94%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%90%8D"><span class="toc-number">16.</span> <span class="toc-text">什么是  建议直接百度java spi### mpush 使用SPI的目的    肯定是为了扩展性，在不想修改源码的情况下，去替换系统原有的实现，代价最小也最灵活。 ### mpush目前支持的SPI列表    __所有受支持的SPI都在mpuhs-api* ServerEventListenerFactory* BindValidatorFactory* ClientClassifierFactory* PushHandlerFactory* ExecutorFactory* CacheManagerFactory* MQClientFactory* ServiceRegistryFactory* ServiceDiscoveryFactory* PushListenerFactory### 开发流程 * 新建一个maven工程，并加入mpush-api模块的依赖 * 实现要定制的接口和其对应的Factory * 在resources目录下创建META-INF.services目录 * 创建名字为com.mpush.api.spi.xxx.XXXFactory&#96;&#96;&#96;的文件，即对应的接口名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E8%BF%9B%E9%98%B6"><span class="toc-number"></span> <span class="toc-text">第四章 深度进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2"><span class="toc-number">1.</span> <span class="toc-text">密钥交换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">交换方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%B5%81%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">交换流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%A1%E6%89%8B%E5%8F%8A%E5%BF%AB%E9%80%9F%E9%87%8D%E8%BF%9E"><span class="toc-number">4.</span> <span class="toc-text">握手及快速重连</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E5%9B%BE"><span class="toc-number">5.</span> <span class="toc-text">时序图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="toc-number">6.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E8%BF%9E%E6%8E%A5%E7%BB%91%E5%AE%9A%E7%94%A8%E6%88%B7"><span class="toc-number">7.</span> <span class="toc-text">给连接绑定用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E5%BA%8F%E5%9B%BE-1"><span class="toc-number">8.</span> <span class="toc-text">时序图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="toc-number">9.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E6%B5%81%E7%A8%8B"><span class="toc-number">10.</span> <span class="toc-text">消息推送流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">11.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-4"><span class="toc-number">12.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E4%BB%A3%E7%90%86"><span class="toc-number">13.</span> <span class="toc-text">HTTP代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">14.</span> <span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">15.</span> <span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">16.</span> <span class="toc-text">流程分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-5"><span class="toc-number">17.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-number">18.</span> <span class="toc-text">补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E5%88%86%E5%8F%91"><span class="toc-number">19.</span> <span class="toc-text">消息分发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">20.</span> <span class="toc-text">消息序列化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%8E%8B%E7%BC%A9"><span class="toc-number">21.</span> <span class="toc-text">消息加密与压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%AE%9A%E5%88%B6"><span class="toc-number">22.</span> <span class="toc-text">线程池配置与定制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%A1%8CPUSH"><span class="toc-number">23.</span> <span class="toc-text">上行PUSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E4%BA%A7%E7%94%9F%E8%83%8C%E6%99%AF"><span class="toc-number">24.</span> <span class="toc-text">接口产生背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">25.</span> <span class="toc-text">接口的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E6%8E%A8%E9%80%81%E4%B8%8E%E6%B5%81%E6%8E%A7"><span class="toc-number">26.</span> <span class="toc-text">广播推送与流控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BF%E6%92%AD%E6%8E%A8%E9%80%81%EF%BC%9F"><span class="toc-number">27.</span> <span class="toc-text">什么是广播推送？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B9%BF%E6%92%AD%E6%8E%A8%E9%80%81%E8%A6%81%E6%8E%A7%E5%88%B6%E6%B5%81%E9%87%8F%EF%BC%9F"><span class="toc-number">28.</span> <span class="toc-text">为什么广播推送要控制流量？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">29.</span> <span class="toc-text">流量控制的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8D%95%E4%BB%BB%E5%8A%A1%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">29.1.</span> <span class="toc-text">1. 单任务流量控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%85%A8%E5%B1%80%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">29.2.</span> <span class="toc-text">2. 全局流量控制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E6%8E%A8%E9%80%81%E6%9D%A1%E4%BB%B6%E8%BF%87%E6%BB%A4"><span class="toc-number">30.</span> <span class="toc-text">广播推送条件过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AF%B9%E7%94%A8%E6%88%B7%E8%BF%9B%E8%A1%8C%E8%BF%87%E6%BB%A4%EF%BC%9F"><span class="toc-number">31.</span> <span class="toc-text">为什么要对用户进行过滤？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%AD%9B%E9%80%89%E7%BA%AC%E5%BA%A6"><span class="toc-number">32.</span> <span class="toc-text">目前支持的筛选纬度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">33.</span> <span class="toc-text">目前支持的表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AFACK"><span class="toc-number">34.</span> <span class="toc-text">消息ACK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E6%B6%88%E6%81%AF"><span class="toc-number">35.</span> <span class="toc-text">离线消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">36.</span> <span class="toc-text">服务端启动流程分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-number">37.</span> <span class="toc-text">日志模块性能优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM%E7%9B%91%E6%8E%A7%E4%B8%8E%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-number">38.</span> <span class="toc-text">JVM监控与性能分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%B3%E8%81%94%E6%9C%8D%E5%8A%A1"><span class="toc-number"></span> <span class="toc-text">第五章 关联服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Alloc%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">Alloc服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alloc-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">alloc 的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%A4%96%E6%8F%90%E4%BE%9B%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89"><span class="toc-number">3.</span> <span class="toc-text">对外提供的接口定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2-1"><span class="toc-number">4.</span> <span class="toc-text">服务部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E6%B5%81%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">客户端建立连接流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%AE%B2%E8%A7%A3"><span class="toc-number">6.</span> <span class="toc-text">实现讲解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alloc%E6%9C%8D%E5%8A%A1%E5%AD%98%E5%9C%A8%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-number">7.</span> <span class="toc-text">Alloc服务存在的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MPNS"><span class="toc-number">8.</span> <span class="toc-text">MPNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0"><span class="toc-number">9.</span> <span class="toc-text">个性化推送平台</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-SDK%E6%8E%A5%E5%85%A5"><span class="toc-number"></span> <span class="toc-text">第六章 SDK接入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AFSDK"><span class="toc-number">1.</span> <span class="toc-text">服务端SDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F-1"><span class="toc-number">2.</span> <span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E9%80%81%E6%B5%81%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">推送流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE-1"><span class="toc-number">4.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90-1"><span class="toc-number">5.</span> <span class="toc-text">流程分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB"><span class="toc-number">6.</span> <span class="toc-text">源码解读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MPushClient-Java"><span class="toc-number">7.</span> <span class="toc-text">MPushClient(Java)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MPushClient-%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">8.</span> <span class="toc-text">MPushClient 架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-6"><span class="toc-number">9.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-SDK"><span class="toc-number">10.</span> <span class="toc-text">Android SDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">11.</span> <span class="toc-text">系统架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-7"><span class="toc-number">12.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MPushClient-Swift"><span class="toc-number">13.</span> <span class="toc-text">MPushClient(Swift)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MPushClient-Obj-C"><span class="toc-number">14.</span> <span class="toc-text">MPushClient(Obj-C)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%BC%A0-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number"></span> <span class="toc-text">第七张 常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">常见问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%94%9F%E6%95%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">1.修改配置文件为什么不生效？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-get-gateway-connection-failure"><span class="toc-number">3.</span> <span class="toc-text">9. get gateway connection failure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90RSA%E5%AF%86%E9%92%A5%E5%AF%B9"><span class="toc-number">4.</span> <span class="toc-text">10. 如何生成RSA密钥对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8E%8B%E6%B5%8B"><span class="toc-number">5.</span> <span class="toc-text">系统压测</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By cmyang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2022008292号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='all'|| 'all' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/Kafka/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 Kafka (11)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/Mysql/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 Mysql (14)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/SpringCloud/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 SpringCloud (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/ElasticSearch/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 ElasticSearch (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/Flowable/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 Flowable (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="http://www.aacopy.cn/categories/Redis/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 Redis (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="http://www.aacopy.cn/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
