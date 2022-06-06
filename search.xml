@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Nginx-部署SSL</title>
+      <link href="/2022/06/07/Nginx/Nginx-%E9%83%A8%E7%BD%B2SSL/"/>
+      <url>/2022/06/07/Nginx/Nginx-%E9%83%A8%E7%BD%B2SSL/</url>
+      
+        <content type="html"><![CDATA[<h2 id="获取证书"><a href="#获取证书" class="headerlink" title="获取证书"></a>获取证书</h2><ul><li><p>登录阿里云</p></li><li><p>搜索SSL</p></li><li><p>进去云盾证书服务页面，选择DV单域名证书</p><p><img src="/images/Nginx-%E9%83%A8%E7%BD%B2SSL/image-20220607003418788.png" alt="image-20220607003418788"></p></li><li><p>选择20，免费，点击购买</p></li><li><p>购买完成后，进入数字证书管理服务</p><p><img src="/images/Nginx-%E9%83%A8%E7%BD%B2SSL/image-20220607003744548.png" alt="image-20220607003744548"></p></li><li><p>绑定自己的域名，并提交审核</p></li><li><p>等状态变为已签发，点击下载</p><p><img src="/images/Nginx-%E9%83%A8%E7%BD%B2SSL/image-20220607003909327.png" alt="image-20220607003909327"></p></li><li><p>下载nginx版本的证书</p></li><li><p>在nginx的目录下创建cert的目录，上传证书，并解压</p></li><li><p>修改nginx配置</p></li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  aacopy.cn;</span><br><span class="line"><span class="attribute">rewrite</span><span class="regexp"> ^(.*)$</span> https://<span class="variable">$&#123;server_name&#125;</span><span class="variable">$1</span> <span class="literal">permanent</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># HTTPS server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">        <span class="attribute">server_name</span>  aacopy.cn;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">ssl_certificate</span>      /usr/local/nginx/cert/7897869_aacopy.cn.pem;</span><br><span class="line">        <span class="attribute">ssl_certificate_key</span>  /usr/local/nginx/cert/7897869_aacopy.cn.key;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">ssl_session_cache</span>    shared:SSL:<span class="number">1m</span>;</span><br><span class="line">        <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">ssl_ciphers</span>  HIGH:!aNULL:!MD5;</span><br><span class="line">        <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">rroot</span>   /aacopy/blog/aacopy;</span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>重启nginx</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx-安装</title>
+      <link href="/2022/06/07/Nginx/Nginx-%E5%AE%89%E8%A3%85/"/>
+      <url>/2022/06/07/Nginx/Nginx-%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<ul><li>下载稳定版本安装包，<a href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></li><li>例如：<a href="https://nginx.org/download/nginx-1.22.0.tar.gz">https://nginx.org/download/nginx-1.22.0.tar.gz</a></li><li>上传nginx-1.22.0.tar.gz至/usr/local/src包下</li><li><code>tar -zxvf nginx-1.22.0.tar.gz</code> 解压</li><li><code>cd nginx-1.22.0</code></li><li><code>./configure --with-http_stub_status_module --with-http_ssl_module</code></li><li><code>make &amp; make install</code></li><li><code>/usr/local/nginx/sbin/nginx -v</code></li><li>启动<code>/usr/local/nginx/sbin/nginx</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git-安装Linux</title>
       <link href="/2022/05/29/Git/Git-%E5%AE%89%E8%A3%85Linux/"/>
       <url>/2022/05/29/Git/Git-%E5%AE%89%E8%A3%85Linux/</url>
@@ -322,7 +372,7 @@
       <link href="/2022/02/16/Git/Git-%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/02/16/Git/Git-%E5%91%BD%E4%BB%A4/</url>
       
-        <content type="html"><![CDATA[<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul><li><p>git –help</p><p>git帮助文档</p></li><li><p>git –version</p><p>查看git版本</p></li><li><p>git init</p><p>创建空的本地仓库</p></li><li><p>git add</p><p>将文件添加到暂存区</p></li><li><p>git config –global user.email “<a href="mailto:&#121;&#x6f;&#x75;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#121;&#x6f;&#x75;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a>“</p></li><li><p>git config –global user.name “Your Name”</p><p>配置邮箱及用户名</p></li><li><p>git commit -m “xxx”</p><p>将暂存区提交到本地仓库</p></li><li><p>git remote add origin <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x65;&#x65;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x65;&#x65;&#x2e;&#99;&#111;&#109;</a>:aacopy/xxx.git</p><p>关联本地仓库和名称为origin远程仓库</p></li><li><p>git push -u origin master</p><p>将变更推送到名称为origin的远程仓库的master分支上</p></li><li><p>git fetch</p><p>拉去远程仓库的变更到本地仓库</p></li><li><p>git merge origin/master</p><p>将远程的变更，合并到本地的master分支</p></li><li><p>git pull</p><p>等于上面两个命令的合并</p></li><li><p>git status</p><p>查看git上变更的文件状态</p></li><li><p>git rm xxx</p><p>删除工作区的文件，并提交到暂存区</p></li><li><p>git rm –catch xxx</p><p>仅删除暂存区的文件</p></li><li><p>git checkout xxx</p><p>从暂存区将文件恢复的工作区，有文件则覆盖</p></li><li><p>git checkout master xxx</p><p>从master分支恢复文件到本地</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul><li><p>git –help</p><p>git帮助文档</p></li><li><p>git –version</p><p>查看git版本</p></li><li><p>git init</p><p>创建空的本地仓库</p></li><li><p>git add</p><p>将文件添加到暂存区</p></li><li><p>git config –global user.email “<a href="mailto:&#x79;&#111;&#117;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">&#x79;&#111;&#117;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a>“</p></li><li><p>git config –global user.name “Your Name”</p><p>配置邮箱及用户名</p></li><li><p>git commit -m “xxx”</p><p>将暂存区提交到本地仓库</p></li><li><p>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#101;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#101;&#x65;&#x2e;&#99;&#x6f;&#109;</a>:aacopy/xxx.git</p><p>关联本地仓库和名称为origin远程仓库</p></li><li><p>git push -u origin master</p><p>将变更推送到名称为origin的远程仓库的master分支上</p></li><li><p>git fetch</p><p>拉去远程仓库的变更到本地仓库</p></li><li><p>git merge origin/master</p><p>将远程的变更，合并到本地的master分支</p></li><li><p>git pull</p><p>等于上面两个命令的合并</p></li><li><p>git status</p><p>查看git上变更的文件状态</p></li><li><p>git rm xxx</p><p>删除工作区的文件，并提交到暂存区</p></li><li><p>git rm –catch xxx</p><p>仅删除暂存区的文件</p></li><li><p>git checkout xxx</p><p>从暂存区将文件恢复的工作区，有文件则覆盖</p></li><li><p>git checkout master xxx</p><p>从master分支恢复文件到本地</p></li></ul>]]></content>
       
       
       <categories>
@@ -1507,9 +1557,9 @@
       
         <tags>
             
-            <tag> 性能 </tag>
-            
             <tag> Jconsole </tag>
+            
+            <tag> 性能 </tag>
             
         </tags>
       
@@ -1534,9 +1584,9 @@
       
         <tags>
             
-            <tag> 性能 </tag>
-            
             <tag> Jconsole </tag>
+            
+            <tag> 性能 </tag>
             
         </tags>
       
@@ -1561,9 +1611,9 @@
       
         <tags>
             
-            <tag> Jmeter </tag>
-            
             <tag> 性能 </tag>
+            
+            <tag> Jmeter </tag>
             
         </tags>
       
