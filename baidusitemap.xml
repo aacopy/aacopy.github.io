@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.aacopy.cn/2022/01/04/Kafka/Kafka-%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF/</loc>
+    <lastmod>2022-06-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aacopy.cn/2022/02/17/Seata/Seata-seata%E4%B8%8E%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF/</loc>
+    <lastmod>2022-06-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.aacopy.cn/2022/06/10/SkyWalking/SkyWalking-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2022-06-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.aacopy.cn/2022/06/13/XXL-Job/XXL-Job-%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2022-06-14</lastmod>
   </url>
@@ -23,10 +35,6 @@
   <url>
     <loc>https://www.aacopy.cn/2022/06/11/SkyWalking/SkyWalking-UI%E5%92%8C%E6%8C%87%E6%A0%87/</loc>
     <lastmod>2022-06-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aacopy.cn/2022/06/10/SkyWalking/SkyWalking-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2022-06-11</lastmod>
   </url>
   <url>
     <loc>https://www.aacopy.cn/2021/11/18/Docker/Linux%E5%AE%89%E8%A3%85Docker/</loc>
@@ -134,10 +142,6 @@
   </url>
   <url>
     <loc>https://www.aacopy.cn/2022/02/01/Spring/Spring-@Async/</loc>
-    <lastmod>2022-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aacopy.cn/2022/02/17/Seata/Seata-seata%E4%B8%8E%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF/</loc>
     <lastmod>2022-06-06</lastmod>
   </url>
   <url>
@@ -302,10 +306,6 @@
   </url>
   <url>
     <loc>https://www.aacopy.cn/2021/12/14/Kafka/Kafka-%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2022-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://www.aacopy.cn/2022/01/04/Kafka/Kafka-%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF/</loc>
     <lastmod>2022-06-06</lastmod>
   </url>
   <url>
