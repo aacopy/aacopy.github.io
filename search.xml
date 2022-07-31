@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>分库分表思想</title>
+      <link href="/Shardingsphere/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E6%80%9D%E6%83%B3/"/>
+      <url>/Shardingsphere/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8%E6%80%9D%E6%83%B3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据库架构演变史"><a href="#数据库架构演变史" class="headerlink" title="数据库架构演变史"></a>数据库架构演变史</h2><ul><li><p>单机</p><ul><li><p>高并发下查询慢</p></li><li><p>单机故障</p></li></ul></li><li><p>主从</p><ul><li>主从同步数据</li><li>主节点写，从节点读</li><li>从库可水平扩展，满足更大并发的读需求</li><li>主库单节点压力</li></ul></li><li><p>多主多从</p><ul><li>多节点数据保持一致性，多主之间同步比较复杂</li></ul></li><li><p>分库分表</p><ul><li>对业务库进行水平或垂直拆分多库多表</li></ul></li></ul><h2 id="数据库性能优化思路"><a href="#数据库性能优化思路" class="headerlink" title="数据库性能优化思路"></a>数据库性能优化思路</h2><ul><li>软优化<ul><li>数据库参数调优</li><li>慢sql分析，执行计划分析，优化sql语句</li><li>优化索引结构</li><li>优化表结构</li><li>引入缓存，ES等中间件</li></ul></li><li>硬件优化<ul><li>提高系统硬件性能，加带宽，加CPU，加内存</li></ul></li><li>分库分表<ul><li>根据业务情况，选择合适的分库分表策略</li><li>优先选择分表看是否满足业务需求和未来的增长，分表可以解决单表数据量大，查询慢的问题，但是无法解决高并发下的IO瓶颈</li></ul></li></ul><h2 id="分库分表的优点"><a href="#分库分表的优点" class="headerlink" title="分库分表的优点"></a>分库分表的优点</h2><ul><li>解决数据库本身瓶颈<ul><li>连接数过多问题，访问量过大，或者连接数设置比较小（默认100，最大可设置16384）都会出现“too many connections”错误</li><li>分表可以解决单表数据量过大，查询慢的问题</li><li>分库可以解决单库访问压力过大的问题</li></ul></li><li>解决系统IO和CPU瓶颈<ul><li>磁盘读写IO瓶颈</li><li>网络IO瓶颈</li><li>CPU瓶颈，复杂的SQL计算，SQL执行占用CPU过高，扫描行过多，锁冲突，锁等待等原因<ul><li>可以通过show processlist，show full processlist，发现CPU占用高的SQL，State列值是Sending data，Copy to tmp table，Copy to tmp table on disk，Sort result，Using filesort，等都可能是有性能问题的SQL</li><li>通过执行计划分析</li></ul></li></ul></li></ul><h2 id="分库分表带来的问题"><a href="#分库分表带来的问题" class="headerlink" title="分库分表带来的问题"></a>分库分表带来的问题</h2><ul><li>跨节点Join关联查询</li><li>跨库带来的分布式事务问题</li><li>执行的SQL排序、分页、函数计算问题</li><li>全局主键重复问题</li><li>二次扩容问题</li><li>技术选型问题</li></ul><h2 id="垂直分表"><a href="#垂直分表" class="headerlink" title="垂直分表"></a>垂直分表</h2><ul><li>基于列字段大表拆小表</li><li>不常用的字段单独放在一张表</li><li>text大字段拆分出来放在附表中</li><li>经常组合查询的放在一张表</li></ul><h2 id="垂直分库"><a href="#垂直分库" class="headerlink" title="垂直分库"></a>垂直分库</h2><p>数据库的CPU长期处于90%+的利用率，数据库连接不够时，需要分库优化</p><ul><li>对系统中的不同业务进行拆分，连接到不同的数据库</li><li>垂直分库避免了不同业务竞争同一个数据库资源，在高并发场景下可以突破IO，连接数，硬件资源的瓶颈</li><li>降低了业务层面的耦合，方便维护</li><li>微服务项目就是垂直分库的体现</li></ul><p>垂直分库分表可以提高并发能力，但是无法解决单表数据量大查询效率问题</p><h2 id="水平分表"><a href="#水平分表" class="headerlink" title="水平分表"></a>水平分表</h2><p>当单表数据达到几千万时，查询慢，可以用水平分表解决</p><p>基于数据大表拆小标</p><ul><li>垂直分表：基于表结构拆分</li><li>水平分表：基于表数据拆分</li><li>把一个数据量大的表，拆分成多个小表，每个表的表结构相同，数据不同，全部表数据之和就是全部数据</li><li>才成多表后，每个表的数据量减少，查询效率变高</li><li>减少了锁表时间，当添加一列的时候mysql会锁表，期间所有读写操作只能等待</li><li>但是所有表都在同一个库，无法解决单库资源的瓶颈</li></ul><h2 id="水平分库"><a href="#水平分库" class="headerlink" title="水平分库"></a>水平分库</h2><p>单数据库的资源是有限的，水平分库可以解决</p><ul><li>把表中的数据按照一定规则分散到不同的数据库中</li><li>表结构相同，数据库不同</li><li>水平分库比水平分表粒度更大</li></ul><h2 id="水平分库分表策略"><a href="#水平分库分表策略" class="headerlink" title="水平分库分表策略"></a>水平分库分表策略</h2><h3 id="range范围"><a href="#range范围" class="headerlink" title="range范围"></a>range范围</h3><ul><li><p>自增id</p><ul><li>通过自增id，根据id范围进行分表，例如id 0~1百万为一个表，1百万到2百万为一个表</li><li>优点：id是自增的，可以无限增长，扩容不用迁移数据，易于维护</li><li>缺点：数据读写集中在新的数据中，数据倾斜严重，利用率不均衡</li></ul></li><li><p>时间范围</p><ul><li>按照年月日进行分表</li></ul></li><li><p>空间范围</p><ul><li>地理位置，省份，区域等</li></ul></li></ul><h3 id="Hash取模"><a href="#Hash取模" class="headerlink" title="Hash取模"></a>Hash取模</h3><p>通过Hash转成整数，再取模</p><p>例如，2个库，每个库4个表</p><ul><li>库id = userId % 库数量</li><li>表id = userId % 库数量 % 表数量</li></ul><p>优点：保证数据均匀分布到各个库表中，避免热点数据问题</p><p>缺点：扩容不方便，需要数据迁移</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Shardingsphere </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Shardingsphere </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Netty-NIO</title>
       <link href="/Netty/Netty-NIO/"/>
       <url>/Netty/Netty-NIO/</url>
