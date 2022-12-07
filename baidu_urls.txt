@@ -32,8 +32,8 @@ https://www.aacopy.cn/she-ji-mo-shi/she-ji-mo-shi-helloworld/
 https://www.aacopy.cn/util/jwt/
 https://www.aacopy.cn/minio/minio-client/
 https://www.aacopy.cn/springcloud/sentinel-nacos-gui-ze-pei-zhi-chi-jiu-hua/
-https://www.aacopy.cn/springcloud/gateway-zi-ding-yi-fu-zai-jun-heng/
 https://www.aacopy.cn/springcloud/gateway-ju-he-swagger/
+https://www.aacopy.cn/springcloud/gateway-zi-ding-yi-fu-zai-jun-heng/
 https://www.aacopy.cn/springcloud/openfeign-chuan-di-qing-qiu-tou/
 https://www.aacopy.cn/redis/redistemplate/
 https://www.aacopy.cn/seata/seata-seata-yu-shi-wu-xiao-xi/
