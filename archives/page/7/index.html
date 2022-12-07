@@ -1045,27 +1045,23 @@ https://www.docker.com/get-started
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/">
+                        <a href="/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="性能分析工具-jvisualvm">
+                                <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="性能分析工具-Jconsole">
                                 
-                                <span class="card-title">性能分析工具-jvisualvm</span>
+                                <span class="card-title">性能分析工具-Jconsole</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    位置：jdk1.8.0_301\bin\jvisualvm.exe
-1. 远程监控
-监控远程服务需要在服务器上启动jstatd服务
-
-找一个随意文件夹，创建文件，并添加内容
-
-touch jstatd.all.policy
-
-grant c
+                                    JDK自带的图形化分析工具，可以链接本地和远程的服务
+位置：jdk1.8.0_301\bin\jconsole.exe
+windows查看端口对应的进程：
+C:\&gt;netstat -ano | findstr "9083"
+  TCP
                                 
                             </div>
                             <div class="publish-info">
@@ -1114,23 +1110,27 @@ grant c
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/">
+                        <a href="/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="性能分析工具-Jconsole">
+                                <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="性能分析工具-jvisualvm">
                                 
-                                <span class="card-title">性能分析工具-Jconsole</span>
+                                <span class="card-title">性能分析工具-jvisualvm</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    JDK自带的图形化分析工具，可以链接本地和远程的服务
-位置：jdk1.8.0_301\bin\jconsole.exe
-windows查看端口对应的进程：
-C:\&gt;netstat -ano | findstr "9083"
-  TCP
+                                    位置：jdk1.8.0_301\bin\jvisualvm.exe
+1. 远程监控
+监控远程服务需要在服务器上启动jstatd服务
+
+找一个随意文件夹，创建文件，并添加内容
+
+touch jstatd.all.policy
+
+grant c
                                 
                             </div>
                             <div class="publish-info">

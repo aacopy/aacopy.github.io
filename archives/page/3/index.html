@@ -1135,24 +1135,19 @@ Sentinel的流控规则持久化到nacos中，并且在Se
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/springcloud/gateway-ju-he-swagger/">
+                        <a href="/springcloud/gateway-zi-ding-yi-fu-zai-jun-heng/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Gateway-聚合swagger">
+                                <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Gateway-自定义负载均衡">
                                 
-                                <span class="card-title">Gateway-聚合swagger</span>
+                                <span class="card-title">Gateway-自定义负载均衡</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    gateway聚合微服务swagger参考：《重新定义Spring Cloud实战》
-UI：knife4j
-
-引入依赖
-&lt;dependency&gt;
-          &lt;groupId&gt;io.springfox&lt;
+                                    需求：多人开发同一个微服务时，同时注册了多个相同的服务在注册中心上，通过网关调用服务时，不希望由自带的负载均衡路由，需要调到指定的服务，通过在请求头里加上version标识，在网关路由转发时，只要请求头里的标识和注册到nacos上的服务元数
                                 
                             </div>
                             <div class="publish-info">
@@ -1201,19 +1196,24 @@ UI：knife4j
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="/springcloud/gateway-zi-ding-yi-fu-zai-jun-heng/">
+                        <a href="/springcloud/gateway-ju-he-swagger/">
                             <div class="card-image">
                                 
                                 
-                                <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Gateway-自定义负载均衡">
+                                <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Gateway-聚合swagger">
                                 
-                                <span class="card-title">Gateway-自定义负载均衡</span>
+                                <span class="card-title">Gateway-聚合swagger</span>
                             </div>
                         </a>
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    需求：多人开发同一个微服务时，同时注册了多个相同的服务在注册中心上，通过网关调用服务时，不希望由自带的负载均衡路由，需要调到指定的服务，通过在请求头里加上version标识，在网关路由转发时，只要请求头里的标识和注册到nacos上的服务元数
+                                    gateway聚合微服务swagger参考：《重新定义Spring Cloud实战》
+UI：knife4j
+
+引入依赖
+&lt;dependency&gt;
+          &lt;groupId&gt;io.springfox&lt;
                                 
                             </div>
                             <div class="publish-info">
