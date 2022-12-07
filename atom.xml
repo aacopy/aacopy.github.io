@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>aacopy</title>
+  
+  <subtitle>aacopy</subtitle>
+  <link href="https://www.aacopy.cn/atom.xml" rel="self"/>
+  
+  <link href="https://www.aacopy.cn/"/>
+  <updated>2022-11-27T16:17:33.367Z</updated>
+  <id>https://www.aacopy.cn/</id>
+  
+  <author>
+    <name>cmyang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MongoDB-事务</title>
+    <link href="https://www.aacopy.cn/mongodb/mongodb-shi-wu/"/>
+    <id>https://www.aacopy.cn/mongodb/mongodb-shi-wu/</id>
+    <published>2022-11-20T12:24:00.000Z</published>
+    <updated>2022-11-27T16:17:33.367Z</updated>
+    
+    
+    <summary type="html">MongoDB事务</summary>
+    
+    
+    
+    <category term="MongoDB" scheme="https://www.aacopy.cn/categories/MongoDB/"/>
+    
+    
+    <category term="MongoDB" scheme="https://www.aacopy.cn/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB-入门</title>
+    <link href="https://www.aacopy.cn/mongodb/mongodb-ru-men/"/>
+    <id>https://www.aacopy.cn/mongodb/mongodb-ru-men/</id>
+    <published>2022-11-19T05:45:00.000Z</published>
+    <updated>2022-11-20T12:23:59.695Z</updated>
+    
+    
+    <summary type="html">MongoDB简介，安装，入门用法</summary>
+    
+    
+    
+    <category term="MongoDB" scheme="https://www.aacopy.cn/categories/MongoDB/"/>
+    
+    
+    <category term="MongoDB" scheme="https://www.aacopy.cn/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis-plus-乐观锁</title>
+    <link href="https://www.aacopy.cn/mybatis/mybatis-plus-le-guan-suo/"/>
+    <id>https://www.aacopy.cn/mybatis/mybatis-plus-le-guan-suo/</id>
+    <published>2022-11-02T15:25:00.000Z</published>
+    <updated>2022-12-07T17:53:50.784Z</updated>
+    
+    
+    <summary type="html">Mybatis-plus乐观锁</summary>
+    
+    
+    
+    <category term="Mybatis" scheme="https://www.aacopy.cn/categories/Mybatis/"/>
+    
+    
+    <category term="Mybatis" scheme="https://www.aacopy.cn/tags/Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ClickHouse-入门</title>
+    <link href="https://www.aacopy.cn/clickhouse/clickhouse-ru-men/"/>
+    <id>https://www.aacopy.cn/clickhouse/clickhouse-ru-men/</id>
+    <published>2022-10-29T10:11:00.000Z</published>
+    <updated>2022-12-07T17:47:49.704Z</updated>
+    
+    
+    <summary type="html">分库分表思想</summary>
+    
+    
+    
+    <category term="ClickHouse" scheme="https://www.aacopy.cn/categories/ClickHouse/"/>
+    
+    
+    <category term="ClickHouse" scheme="https://www.aacopy.cn/tags/ClickHouse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SkyWalking-自定义插件</title>
+    <link href="https://www.aacopy.cn/skywalking/skywalking-zi-ding-yi-cha-jian/"/>
+    <id>https://www.aacopy.cn/skywalking/skywalking-zi-ding-yi-cha-jian/</id>
+    <published>2022-10-28T11:49:00.000Z</published>
+    <updated>2022-12-07T17:56:48.195Z</updated>
+    
+    
+    <summary type="html">SkyWalking自定义插件</summary>
+    
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/categories/SkyWalking/"/>
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/tags/SkyWalking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SkyWalking-JavaAgent</title>
+    <link href="https://www.aacopy.cn/skywalking/skywalking-javaagent/"/>
+    <id>https://www.aacopy.cn/skywalking/skywalking-javaagent/</id>
+    <published>2022-10-28T09:45:00.000Z</published>
+    <updated>2022-12-07T17:57:07.168Z</updated>
+    
+    
+    <summary type="html">SkyWalking零侵入实现方式</summary>
+    
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/categories/SkyWalking/"/>
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/tags/SkyWalking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring-Event</title>
+    <link href="https://www.aacopy.cn/spring/spring-event/"/>
+    <id>https://www.aacopy.cn/spring/spring-event/</id>
+    <published>2022-09-23T08:28:00.000Z</published>
+    <updated>2022-09-23T15:58:56.931Z</updated>
+    
+    
+    <summary type="html">Spring的事件Event</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring-EL</title>
+    <link href="https://www.aacopy.cn/spring/spring-el/"/>
+    <id>https://www.aacopy.cn/spring/spring-el/</id>
+    <published>2022-09-23T02:49:00.000Z</published>
+    <updated>2022-12-07T17:58:07.551Z</updated>
+    
+    
+    <summary type="html">Spring的EL表达式</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring-AOP</title>
+    <link href="https://www.aacopy.cn/spring/spring-aop/"/>
+    <id>https://www.aacopy.cn/spring/spring-aop/</id>
+    <published>2022-09-12T14:44:00.000Z</published>
+    <updated>2022-09-23T15:58:56.927Z</updated>
+    
+    
+    <summary type="html">Spring的AOP切面</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring-IOC</title>
+    <link href="https://www.aacopy.cn/spring/spring-ioc/"/>
+    <id>https://www.aacopy.cn/spring/spring-ioc/</id>
+    <published>2022-09-08T15:01:00.000Z</published>
+    <updated>2022-12-07T17:58:23.214Z</updated>
+    
+    
+    <summary type="html">Spring的IOC容器</summary>
+    
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://www.aacopy.cn/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringSecurity-原理</title>
+    <link href="https://www.aacopy.cn/springsecurity/springsecurity-yuan-li/"/>
+    <id>https://www.aacopy.cn/springsecurity/springsecurity-yuan-li/</id>
+    <published>2022-09-04T18:38:00.000Z</published>
+    <updated>2022-09-04T18:40:18.397Z</updated>
+    
+    
+    <summary type="html">SpringSecurity</summary>
+    
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/categories/SpringSecurity/"/>
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/tags/SpringSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringSecurity-应用</title>
+    <link href="https://www.aacopy.cn/springsecurity/springsecurity-ying-yong/"/>
+    <id>https://www.aacopy.cn/springsecurity/springsecurity-ying-yong/</id>
+    <published>2022-09-04T18:38:00.000Z</published>
+    <updated>2022-09-25T16:32:23.203Z</updated>
+    
+    
+    <summary type="html">SpringSecurity项目中的应用</summary>
+    
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/categories/SpringSecurity/"/>
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/tags/SpringSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringSecurity-入门</title>
+    <link href="https://www.aacopy.cn/springsecurity/springsecurity-ru-men/"/>
+    <id>https://www.aacopy.cn/springsecurity/springsecurity-ru-men/</id>
+    <published>2022-09-03T06:09:00.000Z</published>
+    <updated>2022-12-07T17:59:55.824Z</updated>
+    
+    
+    <summary type="html">SpringSecurity入门</summary>
+    
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/categories/SpringSecurity/"/>
+    
+    
+    <category term="SpringSecurity" scheme="https://www.aacopy.cn/tags/SpringSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ElasticSearch-SQL</title>
+    <link href="https://www.aacopy.cn/elasticsearch/elasticsearch-sql/"/>
+    <id>https://www.aacopy.cn/elasticsearch/elasticsearch-sql/</id>
+    <published>2022-08-10T13:40:00.000Z</published>
+    <updated>2022-09-12T11:31:39.940Z</updated>
+    
+    
+    <summary type="html">ElasticSearch映射</summary>
+    
+    
+    
+    <category term="ElasticSearch" scheme="https://www.aacopy.cn/categories/ElasticSearch/"/>
+    
+    
+    <category term="ElasticSearch" scheme="https://www.aacopy.cn/tags/ElasticSearch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Logstash-同步sql数据到ES</title>
+    <link href="https://www.aacopy.cn/elasticsearch/logstash-tong-bu-sql-shu-ju-dao-es/"/>
+    <id>https://www.aacopy.cn/elasticsearch/logstash-tong-bu-sql-shu-ju-dao-es/</id>
+    <published>2022-08-10T02:34:00.000Z</published>
+    <updated>2022-09-12T11:31:39.940Z</updated>
+    
+    
+    <summary type="html">ElasticSearch映射</summary>
+    
+    
+    
+    <category term="ElasticSearch" scheme="https://www.aacopy.cn/categories/ElasticSearch/"/>
+    
+    
+    <category term="Logstash" scheme="https://www.aacopy.cn/tags/Logstash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kibana-安装</title>
+    <link href="https://www.aacopy.cn/elasticsearch/kibana-an-zhuang/"/>
+    <id>https://www.aacopy.cn/elasticsearch/kibana-an-zhuang/</id>
+    <published>2022-08-08T07:56:00.000Z</published>
+    <updated>2022-08-27T12:48:56.553Z</updated>
+    
+    
+    <summary type="html">ElasticSearch映射</summary>
+    
+    
+    
+    <category term="ElasticSearch" scheme="https://www.aacopy.cn/categories/ElasticSearch/"/>
+    
+    
+    <category term="Kibana" scheme="https://www.aacopy.cn/tags/Kibana/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分库分表思想</title>
+    <link href="https://www.aacopy.cn/shardingsphere/fen-ku-fen-biao-si-xiang/"/>
+    <id>https://www.aacopy.cn/shardingsphere/fen-ku-fen-biao-si-xiang/</id>
+    <published>2022-07-30T17:54:00.000Z</published>
+    <updated>2022-07-31T12:43:16.897Z</updated>
+    
+    
+    <summary type="html">分库分表思想</summary>
+    
+    
+    
+    <category term="Shardingsphere" scheme="https://www.aacopy.cn/categories/Shardingsphere/"/>
+    
+    
+    <category term="Shardingsphere" scheme="https://www.aacopy.cn/tags/Shardingsphere/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netty-NIO</title>
+    <link href="https://www.aacopy.cn/netty/netty-nio/"/>
+    <id>https://www.aacopy.cn/netty/netty-nio/</id>
+    <published>2022-06-26T23:05:00.000Z</published>
+    <updated>2022-12-07T17:54:55.550Z</updated>
+    
+    
+    <summary type="html">NIO</summary>
+    
+    
+    
+    <category term="Netty" scheme="https://www.aacopy.cn/categories/Netty/"/>
+    
+    
+    <category term="Netty" scheme="https://www.aacopy.cn/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XXL-Job-入门</title>
+    <link href="https://www.aacopy.cn/xxl-job/xxl-job-ru-men/"/>
+    <id>https://www.aacopy.cn/xxl-job/xxl-job-ru-men/</id>
+    <published>2022-06-13T14:13:00.000Z</published>
+    <updated>2022-12-07T18:01:09.164Z</updated>
+    
+    
+    <summary type="html">XXL-Job-安装和操作</summary>
+    
+    
+    
+    <category term="XXL-Job" scheme="https://www.aacopy.cn/categories/XXL-Job/"/>
+    
+    
+    <category term="XXL-Job" scheme="https://www.aacopy.cn/tags/XXL-Job/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SkyWalking-告警</title>
+    <link href="https://www.aacopy.cn/skywalking/skywalking-gao-jing/"/>
+    <id>https://www.aacopy.cn/skywalking/skywalking-gao-jing/</id>
+    <published>2022-06-12T14:00:00.000Z</published>
+    <updated>2022-06-12T14:35:07.943Z</updated>
+    
+    
+    <summary type="html">SkyWalking告警模块</summary>
+    
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/categories/SkyWalking/"/>
+    
+    
+    <category term="SkyWalking" scheme="https://www.aacopy.cn/tags/SkyWalking/"/>
+    
+  </entry>
+  
+</feed>

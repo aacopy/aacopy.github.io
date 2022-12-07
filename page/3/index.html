@@ -1,163 +1,1287 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>aacopy - 程序猿</title><meta name="author" content="cmyang"><meta name="copyright" content="cmyang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="aacopy">
-<meta property="og:url" content="https://www.aacopy.cn/page/3/index.html">
-<meta property="og:site_name" content="aacopy">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.aacopy.cn/images/common/header.png">
-<meta property="article:author" content="cmyang">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.aacopy.cn/images/common/header.png"><link rel="shortcut icon" href="/images/common/favicon.png"><link rel="canonical" href="https://www.aacopy.cn/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'aacopy',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-11-28 00:18:27'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE HTML>
+<html lang="zh-CN">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="aacopy">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
-<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
-  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/common/header.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">123</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">52</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">33</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">aacopy</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/RocketMQ/RocketMQ-SpringBoot/" title="RocketMQ-SpringBoot">     <img class="post_bg" src="/images/common/rocketmq.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RocketMQ-SpringBoot"></a></div><div class="recent-post-info"><a class="article-title" href="/RocketMQ/RocketMQ-SpringBoot/" title="RocketMQ-SpringBoot">RocketMQ-SpringBoot</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-12T07:54:00.000Z" title="发表于 2022-02-12 15:54:00">2022-02-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RocketMQ/">RocketMQ</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RocketMQ/">RocketMQ</a></span></div><div class="content">RocketMQ 4.9.2版本 与 Springboot 集成</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/RocketMQ/RocketMQ-%E5%AE%89%E8%A3%85/" title="RocketMQ-安装">     <img class="post_bg" src="/images/common/rocketmq.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RocketMQ-安装"></a></div><div class="recent-post-info"><a class="article-title" href="/RocketMQ/RocketMQ-%E5%AE%89%E8%A3%85/" title="RocketMQ-安装">RocketMQ-安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-12T02:33:00.000Z" title="发表于 2022-02-12 10:33:00">2022-02-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RocketMQ/">RocketMQ</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RocketMQ/">RocketMQ</a></span></div><div class="content">RocketMQ 4.9.2版本 安装部署</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/RocketMQ/RocketMQ-HelloWorld/" title="RocketMQ-HelloWorld">     <img class="post_bg" src="/images/common/rocketmq.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RocketMQ-HelloWorld"></a></div><div class="recent-post-info"><a class="article-title" href="/RocketMQ/RocketMQ-HelloWorld/" title="RocketMQ-HelloWorld">RocketMQ-HelloWorld</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-11T15:53:00.000Z" title="发表于 2022-02-11 23:53:00">2022-02-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RocketMQ/">RocketMQ</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RocketMQ/">RocketMQ</a></span></div><div class="content">RocketMQ 入门</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Seata/Seata-OpenFeign%E9%97%AE%E9%A2%98/" title="Seata-OpenFeign问题">     <img class="post_bg" src="/images/common/seata.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Seata-OpenFeign问题"></a></div><div class="recent-post-info"><a class="article-title" href="/Seata/Seata-OpenFeign%E9%97%AE%E9%A2%98/" title="Seata-OpenFeign问题">Seata-OpenFeign问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-11T14:15:00.000Z" title="发表于 2022-02-11 22:15:00">2022-02-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Seata/">Seata</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Seata/">Seata</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/">分布式事务</a></span></div><div class="content">Seata-OpenFeign问题</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Seata/Seata-Demo1.1.0/" title="Seata-Demo1.1.0">     <img class="post_bg" src="/images/common/seata.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Seata-Demo1.1.0"></a></div><div class="recent-post-info"><a class="article-title" href="/Seata/Seata-Demo1.1.0/" title="Seata-Demo1.1.0">Seata-Demo1.1.0</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-11T05:56:00.000Z" title="发表于 2022-02-11 13:56:00">2022-02-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Seata/">Seata</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Seata/">Seata</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/">分布式事务</a></span></div><div class="content">Seata 1.1.0版本Demo</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Seata/Seata-Demo1.3.0/" title="Seata-Demo1.3.0">     <img class="post_bg" src="/images/common/seata.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Seata-Demo1.3.0"></a></div><div class="recent-post-info"><a class="article-title" href="/Seata/Seata-Demo1.3.0/" title="Seata-Demo1.3.0">Seata-Demo1.3.0</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-09T11:09:00.000Z" title="发表于 2022-02-09 19:09:00">2022-02-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Seata/">Seata</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Seata/">Seata</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/">分布式事务</a></span></div><div class="content">Seata1.3.0版本Demo</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Linux/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux-常用命令">     <img class="post_bg" src="/images/common/linux.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux-常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/Linux/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux-常用命令">Linux-常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-08T17:31:00.000Z" title="发表于 2022-02-09 01:31:00">2022-02-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Linux/">Linux</a></span></div><div class="content">Linux-常用命令</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Seata/Seata-Demo1.4.2/" title="Seata-Demo1.4.2">     <img class="post_bg" src="/images/common/seata.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Seata-Demo1.4.2"></a></div><div class="recent-post-info"><a class="article-title" href="/Seata/Seata-Demo1.4.2/" title="Seata-Demo1.4.2">Seata-Demo1.4.2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-08T13:18:00.000Z" title="发表于 2022-02-08 21:18:00">2022-02-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Seata/">Seata</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Seata/">Seata</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/">分布式事务</a></span></div><div class="content">Seata1.4.2版本Demo</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Spring/Spring-RestTemplate/" title="Spring-RestTemplate">     <img class="post_bg" src="/images/common/spring.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring-RestTemplate"></a></div><div class="recent-post-info"><a class="article-title" href="/Spring/Spring-RestTemplate/" title="Spring-RestTemplate">Spring-RestTemplate</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-03T13:59:00.000Z" title="发表于 2022-02-03 21:59:00">2022-02-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Spring/">Spring</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Spring/">Spring</a></span></div><div class="content">Spring中RestTemplate的应用和优化</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Spring/Spring-@Async/" title="Spring-@Async">     <img class="post_bg" src="/images/common/spring.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring-@Async"></a></div><div class="recent-post-info"><a class="article-title" href="/Spring/Spring-@Async/" title="Spring-@Async">Spring-@Async</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-01T13:59:00.000Z" title="发表于 2022-02-01 21:59:00">2022-02-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Spring/">Spring</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Spring/">Spring</a></span></div><div class="content">Spring中Async注解的应用</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E9%AA%8C%E8%AF%81%E7%A0%81/Kaptcha/" title="验证码-Kaptcha">     <img class="post_bg" src="/images/common/verificationcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="验证码-Kaptcha"></a></div><div class="recent-post-info"><a class="article-title" href="/%E9%AA%8C%E8%AF%81%E7%A0%81/Kaptcha/" title="验证码-Kaptcha">验证码-Kaptcha</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-02-01T13:59:00.000Z" title="发表于 2022-02-01 21:59:00">2022-02-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%AA%8C%E8%AF%81%E7%A0%81/">验证码</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/">验证码</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Kaptcha/">Kaptcha</a></span></div><div class="content">google kaptcha 图形验证码</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E7%9F%AD%E4%BF%A1/%E7%9F%AD%E4%BF%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%85%A5%E6%B5%8B%E8%AF%95/" title="短信平台接入测试">     <img class="post_bg" src="/images/common/shortmessage.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="短信平台接入测试"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%9F%AD%E4%BF%A1/%E7%9F%AD%E4%BF%A1%E5%B9%B3%E5%8F%B0%E6%8E%A5%E5%85%A5%E6%B5%8B%E8%AF%95/" title="短信平台接入测试">短信平台接入测试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-31T02:03:00.000Z" title="发表于 2022-01-31 10:03:00">2022-01-31</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%9F%AD%E4%BF%A1/">短信</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%9F%AD%E4%BF%A1/">短信</a></span></div><div class="content">短信平台接入测试</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/RabbitMQ/RabbitMQ%E5%AE%89%E8%A3%85-Docker/" title="RabbitMQ安装-Docker">     <img class="post_bg" src="/images/common/rabbitmq.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="RabbitMQ安装-Docker"></a></div><div class="recent-post-info"><a class="article-title" href="/RabbitMQ/RabbitMQ%E5%AE%89%E8%A3%85-Docker/" title="RabbitMQ安装-Docker">RabbitMQ安装-Docker</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-30T04:49:00.000Z" title="发表于 2022-01-30 12:49:00">2022-01-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RabbitMQ/">RabbitMQ</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">消息队列</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/RabbitMQ/">RabbitMQ</a></span></div><div class="content">RabbitMQ安装-Docker</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/SpringCloud/Nacos%E5%AE%89%E8%A3%85-Docker/" title="Nacos安装-Docker">     <img class="post_bg" src="/images/common/nacos.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nacos安装-Docker"></a></div><div class="recent-post-info"><a class="article-title" href="/SpringCloud/Nacos%E5%AE%89%E8%A3%85-Docker/" title="Nacos安装-Docker">Nacos安装-Docker</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-30T03:42:00.000Z" title="发表于 2022-01-30 11:42:00">2022-01-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/SpringCloud/">SpringCloud</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/SpringCloud/">SpringCloud</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Nacos/">Nacos</a></span></div><div class="content">Nacos安装-Docker</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/ElasticSearch/ElasticSearch-SpringBoot/" title="ElasticSearch-SpringBoot">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-SpringBoot"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/ElasticSearch-SpringBoot/" title="ElasticSearch-SpringBoot">ElasticSearch-SpringBoot</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-26T12:21:00.000Z" title="发表于 2022-01-26 20:21:00">2022-01-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">SpringBoot整合ElasticSearch开发</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/ElasticSearch/ElasticSerach-%E6%90%9C%E7%B4%A2/" title="ElasticSearch-搜索">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-搜索"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/ElasticSerach-%E6%90%9C%E7%B4%A2/" title="ElasticSearch-搜索">ElasticSearch-搜索</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-12T14:32:00.000Z" title="发表于 2022-01-12 22:32:00">2022-01-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">ElasticSearch搜索</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/ElasticSearch/ElasticSerach-%E6%96%87%E6%A1%A3/" title="ElasticSearch-文档">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-文档"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/ElasticSerach-%E6%96%87%E6%A1%A3/" title="ElasticSearch-文档">ElasticSearch-文档</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-08T14:33:00.000Z" title="发表于 2022-01-08 22:33:00">2022-01-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">ElasticSearch文档</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/ElasticSearch/ElasticSerach-%E6%98%A0%E5%B0%84/" title="ElasticSearch-映射">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-映射"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/ElasticSerach-%E6%98%A0%E5%B0%84/" title="ElasticSearch-映射">ElasticSearch-映射</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-06T15:42:00.000Z" title="发表于 2022-01-06 23:42:00">2022-01-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">ElasticSearch映射</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/ElasticSearch/ElasticSerach-%E7%B4%A2%E5%BC%95/" title="ElasticSearch-索引">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-索引"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/ElasticSerach-%E7%B4%A2%E5%BC%95/" title="ElasticSearch-索引">ElasticSearch-索引</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-05T17:22:00.000Z" title="发表于 2022-01-06 01:22:00">2022-01-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">ElasticSearch索引</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/ElasticSearch/Elasticsearch-HelloWorld/" title="ElasticSearch-HelloWorld">     <img class="post_bg" src="/images/common/elasticsearch.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ElasticSearch-HelloWorld"></a></div><div class="recent-post-info"><a class="article-title" href="/ElasticSearch/Elasticsearch-HelloWorld/" title="ElasticSearch-HelloWorld">ElasticSearch-HelloWorld</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-05T07:30:00.000Z" title="发表于 2022-01-05 15:30:00">2022-01-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ElasticSearch/">ElasticSearch</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ElasticSearch/">ElasticSearch</a></span></div><div class="content">ElasticSerach简介,及安装</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/common/header.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">cmyang</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">123</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">52</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">33</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/aacopy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://gitee.com/aacopy" target="_blank" title="Gitee"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:969312613@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/MongoDB/MongoDB-%E4%BA%8B%E5%8A%A1/" title="MongoDB-事务"><img src="/images/common/mongodb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MongoDB-事务"/></a><div class="content"><a class="title" href="/MongoDB/MongoDB-%E4%BA%8B%E5%8A%A1/" title="MongoDB-事务">MongoDB-事务</a><time datetime="2022-11-20T12:24:00.000Z" title="发表于 2022-11-20 20:24:00">2022-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/MongoDB/MongoDB-%E5%85%A5%E9%97%A8/" title="MongoDB-入门"><img src="/images/common/mongodb.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MongoDB-入门"/></a><div class="content"><a class="title" href="/MongoDB/MongoDB-%E5%85%A5%E9%97%A8/" title="MongoDB-入门">MongoDB-入门</a><time datetime="2022-11-19T05:45:00.000Z" title="发表于 2022-11-19 13:45:00">2022-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Mybatis/Mybatis-plus-%E4%B9%90%E8%A7%82%E9%94%81/" title="Mybatis-plus-乐观锁"><img src="/images/common/mybatisplus.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mybatis-plus-乐观锁"/></a><div class="content"><a class="title" href="/Mybatis/Mybatis-plus-%E4%B9%90%E8%A7%82%E9%94%81/" title="Mybatis-plus-乐观锁">Mybatis-plus-乐观锁</a><time datetime="2022-11-02T15:25:00.000Z" title="发表于 2022-11-02 23:25:00">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ClickHouse/ClickHouse-%E5%85%A5%E9%97%A8/" title="ClickHouse-入门"><img src="/images/common/clickhouse.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ClickHouse-入门"/></a><div class="content"><a class="title" href="/ClickHouse/ClickHouse-%E5%85%A5%E9%97%A8/" title="ClickHouse-入门">ClickHouse-入门</a><time datetime="2022-10-29T10:11:00.000Z" title="发表于 2022-10-29 18:11:00">2022-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/SkyWalking/SkyWalking-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6/" title="SkyWalking-自定义插件"><img src="/images/common/skywalking.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SkyWalking-自定义插件"/></a><div class="content"><a class="title" href="/SkyWalking/SkyWalking-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6/" title="SkyWalking-自定义插件">SkyWalking-自定义插件</a><time datetime="2022-10-28T11:49:00.000Z" title="发表于 2022-10-28 19:49:00">2022-10-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
+    <title>aacopy</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="aacopy" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">aacopy</span>
+                </a>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ClickHouse/"><span class="card-category-list-name">ClickHouse</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Docker/"><span class="card-category-list-name">Docker</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Drools/"><span class="card-category-list-name">Drools</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ElasticSearch/"><span class="card-category-list-name">ElasticSearch</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Flowable/"><span class="card-category-list-name">Flowable</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Groovy/"><span class="card-category-list-name">Groovy</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Aspose/" style="font-size: 1.16em; color: #999b9e">Aspose</a> <a href="/tags/ClickHouse/" style="font-size: 1.1em; color: #999">ClickHouse</a> <a href="/tags/Docker/" style="font-size: 1.21em; color: #999ea4">Docker</a> <a href="/tags/Drools/" style="font-size: 1.1em; color: #999">Drools</a> <a href="/tags/Druid/" style="font-size: 1.1em; color: #999">Druid</a> <a href="/tags/ElasticSearch/" style="font-size: 1.33em; color: #99a2af">ElasticSearch</a> <a href="/tags/Excel/" style="font-size: 1.1em; color: #999">Excel</a> <a href="/tags/Flowable/" style="font-size: 1.39em; color: #99a4b4">Flowable</a> <a href="/tags/Gateway/" style="font-size: 1.16em; color: #999b9e">Gateway</a> <a href="/tags/Git/" style="font-size: 1.16em; color: #999b9e">Git</a> <a href="/tags/Groovy/" style="font-size: 1.1em; color: #999">Groovy</a> <a href="/tags/JDK8/" style="font-size: 1.21em; color: #999ea4">JDK8</a> <a href="/tags/JWT/" style="font-size: 1.1em; color: #999">JWT</a> <a href="/tags/Jconsole/" style="font-size: 1.16em; color: #999b9e">Jconsole</a> <a href="/tags/Jmeter/" style="font-size: 1.1em; color: #999">Jmeter</a> <a href="/tags/Kafka/" style="font-size: 1.44em; color: #99a7ba">Kafka</a> <a href="/tags/Kaptcha/" style="font-size: 1.1em; color: #999">Kaptcha</a> <a href="/tags/Kibana/" style="font-size: 1.1em; color: #999">Kibana</a> <a href="/tags/Linux/" style="font-size: 1.21em; color: #999ea4">Linux</a> <a href="/tags/Logstash/" style="font-size: 1.1em; color: #999">Logstash</a> <a href="/tags/MinIO/" style="font-size: 1.16em; color: #999b9e">MinIO</a> <a href="/tags/MongoDB/" style="font-size: 1.16em; color: #999b9e">MongoDB</a> <a href="/tags/Mpush/" style="font-size: 1.16em; color: #999b9e">Mpush</a> <a href="/tags/Mybatis/" style="font-size: 1.16em; color: #999b9e">Mybatis</a> <a href="/tags/Mybatis-plus/" style="font-size: 1.1em; color: #999">Mybatis-plus</a> <a href="/tags/Mysql/" style="font-size: 1.5em; color: #99a9bf">Mysql</a> <a href="/tags/Nacos/" style="font-size: 1.1em; color: #999">Nacos</a> <a href="/tags/Netty/" style="font-size: 1.21em; color: #999ea4">Netty</a> <a href="/tags/Nginx/" style="font-size: 1.16em; color: #999b9e">Nginx</a> <a href="/tags/OpenFeign/" style="font-size: 1.1em; color: #999">OpenFeign</a> <a href="/tags/Poi/" style="font-size: 1.1em; color: #999">Poi</a> <a href="/tags/RabbitMQ/" style="font-size: 1.1em; color: #999">RabbitMQ</a> <a href="/tags/Redis/" style="font-size: 1.21em; color: #999ea4">Redis</a> <a href="/tags/Redisson/" style="font-size: 1.1em; color: #999">Redisson</a> <a href="/tags/RocketMQ/" style="font-size: 1.21em; color: #999ea4">RocketMQ</a> <a href="/tags/Seata/" style="font-size: 1.27em; color: #99a0a9">Seata</a> <a href="/tags/Sentinel/" style="font-size: 1.1em; color: #999">Sentinel</a> <a href="/tags/Shardingsphere/" style="font-size: 1.1em; color: #999">Shardingsphere</a> <a href="/tags/SkyWalking/" style="font-size: 1.39em; color: #99a4b4">SkyWalking</a> <a href="/tags/Spring/" style="font-size: 1.27em; color: #99a0a9">Spring</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">10</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">123</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-11-27T16:18:25.986Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By cmyang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2022008292号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='all'|| 'all' ==='all')){
-    var parent = document.getElementById('recent-posts');
-    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/Kafka/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">💡 Kafka (11)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/Mysql/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 Mysql (14)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/SpringCloud/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 SpringCloud (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/ElasticSearch/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐱‍👓 ElasticSearch (9)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/Flowable/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 Flowable (8)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.aacopy.cn/categories/Redis/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📒 Redis (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://www.aacopy.cn/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
-    console.log('已挂载magnet')
-    parent.insertAdjacentHTML("afterbegin",child)}
-     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
-    <style></style><!-- hexo injector body_end end --></body></html>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">aacopy</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/aacopy" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/aacopy" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                aacopy
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+
+<main class="content">
+
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/skywalking/skywalking-an-zhuang/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SkyWalking-安装">
+                            
+                            <span class="card-title">SkyWalking-安装</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                前置安装ESmkdir -p /dockerData/elasticsearch/config
+mkdir -p /dockerData/elasticsearch/data
+chmod 777 -R /dockerData/elastic
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/SkyWalking/" class="post-category">
+                                    SkyWalking
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SkyWalking/">
+                            <span class="chip bg-color">SkyWalking</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/nginx/nginx-bu-shu-ssl/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Nginx-部署SSL">
+                            
+                            <span class="card-title">Nginx-部署SSL</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                获取证书
+登录阿里云
+
+搜索SSL
+
+进去云盾证书服务页面，选择DV单域名证书
+
+
+选择20，免费，点击购买
+
+购买完成后，进入数字证书管理服务
+
+
+绑定自己的域名，并提交审核
+
+等状态变为已签发，点击下载
+
+
+下载nginx版本的证书
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Nginx/" class="post-category">
+                                    Nginx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Nginx/">
+                            <span class="chip bg-color">Nginx</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/nginx/nginx-an-zhuang/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx-安装">
+                            
+                            <span class="card-title">Nginx-安装</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+下载稳定版本安装包，https://nginx.org/en/download.html
+例如：https://nginx.org/download/nginx-1.22.0.tar.gz
+上传nginx-1.22.0.tar.gz至/u
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-07
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Nginx/" class="post-category">
+                                    Nginx
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Nginx/">
+                            <span class="chip bg-color">Nginx</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/git/git-an-zhuang-linux/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Git-安装Linux">
+                            
+                            <span class="card-title">Git-安装Linux</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                下载文件下载文件
+https://git-scm.com/download/linux
+安装
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Git/" class="post-category">
+                                    Git
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Git/">
+                            <span class="chip bg-color">Git</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/mysql/druid-xing-neng-jian-kong/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Druid-性能监控">
+                            
+                            <span class="card-title">Druid-性能监控</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                引入maven依赖&lt;dependency&gt;
+          &lt;groupId&gt;mysql&lt;/groupId&gt;
+          &lt;artifactId&gt;mysql-connector-j
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Mysql/" class="post-category">
+                                    Mysql
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Mysql/">
+                            <span class="chip bg-color">Mysql</span>
+                        </a>
+                        
+                        <a href="/tags/Druid/">
+                            <span class="chip bg-color">Druid</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/she-ji-mo-shi/she-ji-mo-shi-uml/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="设计模式-UML">
+                            
+                            <span class="card-title">设计模式-UML</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                UML (Unified modeling language) 是一个统一建模语言
+UML本身是一套符号的规定，这些符号用于描述软件模块之前的关系，比如：类，接口，实现，泛型，依赖，组合，聚合等
+类之间的关系
+依赖、继承、实现、关联、聚合、
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/she-ji-mo-shi/she-ji-mo-shi-helloworld/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="设计模式-HelloWorld">
+                            
+                            <span class="card-title">设计模式-HelloWorld</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                ​	设计模式是对软件设计过程中普遍存在（反复出现）的各种问题，所提出的解决方案
+优点：设计模式可以让程序在以下方面做的更好
+
+代码重用性
+代码可读性
+可扩展性
+可靠性
+使程序具有高内聚，低耦合和特性
+
+七大原则要是设计具备以上有点，需要具备
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/util/jwt/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="JWT">
+                            
+                            <span class="card-title">JWT</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+JWT 是一个开放标准，它定义了一种用于简洁，自包含的用于通信双方之间以 JSON 对象的形式安全传递信息的方法。 可以使用 HMAC 算法或者是 RSA 的公钥密钥对进行签名。
+
+优点
+
+生产的token可以包含基本信息，比如id、用户
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Util/" class="post-category">
+                                    Util
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Util/">
+                            <span class="chip bg-color">Util</span>
+                        </a>
+                        
+                        <a href="/tags/JWT/">
+                            <span class="chip bg-color">JWT</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/minio/minio-client/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="MinIO-Client">
+                            
+                            <span class="card-title">MinIO-Client</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                在Java中使用minio
+
+导入依赖
+&lt;dependency&gt;
+          &lt;groupId&gt;io.minio&lt;/groupId&gt;
+          &lt;artifactId&gt;min
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/MinIO/" class="post-category">
+                                    MinIO
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/MinIO/">
+                            <span class="chip bg-color">MinIO</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/springcloud/sentinel-nacos-gui-ze-pei-zhi-chi-jiu-hua/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Sentinel-Nacos规则配置持久化">
+                            
+                            <span class="card-title">Sentinel-Nacos规则配置持久化</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                需求
+Sentinel默认在控制台（Dashboard）中添加流控降级规则后，将配置规则信息推送给Sentinel客户端，配置的规则记录在内存中，如果客户端重启，规则也就丢失。
+
+
+Sentinel的流控规则持久化到nacos中，并且在Se
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SpringCloud/">
+                            <span class="chip bg-color">SpringCloud</span>
+                        </a>
+                        
+                        <a href="/tags/Sentinel/">
+                            <span class="chip bg-color">Sentinel</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/springcloud/gateway-ju-he-swagger/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Gateway-聚合swagger">
+                            
+                            <span class="card-title">Gateway-聚合swagger</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                gateway聚合微服务swagger参考：《重新定义Spring Cloud实战》
+UI：knife4j
+
+引入依赖
+&lt;dependency&gt;
+          &lt;groupId&gt;io.springfox&lt;
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SpringCloud/">
+                            <span class="chip bg-color">SpringCloud</span>
+                        </a>
+                        
+                        <a href="/tags/Gateway/">
+                            <span class="chip bg-color">Gateway</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/springcloud/gateway-zi-ding-yi-fu-zai-jun-heng/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Gateway-自定义负载均衡">
+                            
+                            <span class="card-title">Gateway-自定义负载均衡</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                需求：多人开发同一个微服务时，同时注册了多个相同的服务在注册中心上，通过网关调用服务时，不希望由自带的负载均衡路由，需要调到指定的服务，通过在请求头里加上version标识，在网关路由转发时，只要请求头里的标识和注册到nacos上的服务元数
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/SpringCloud/" class="post-category">
+                                    SpringCloud
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SpringCloud/">
+                            <span class="chip bg-color">SpringCloud</span>
+                        </a>
+                        
+                        <a href="/tags/Gateway/">
+                            <span class="chip bg-color">Gateway</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/2/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">3 / 11</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/4/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">cmyang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">88.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备2022008292号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://gitee.com/aacopy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:969312613@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=969312613" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 969312613" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
