@@ -1671,31 +1671,6 @@
     
     
     <entry>
-      <title>SpringBoot-@ConfigurationProperties</title>
-      <link href="/springboot/springboot-configurationproperties/"/>
-      <url>/springboot/springboot-configurationproperties/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> SpringBoot </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> SpringBoot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Kafka-AdminApi</title>
       <link href="/kafka/kafka-adminapi/"/>
       <url>/kafka/kafka-adminapi/</url>
@@ -2116,11 +2091,11 @@
     
     
     <entry>
-      <title>性能分析工具-Jconsole</title>
-      <link href="/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/"/>
-      <url>/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/</url>
+      <title>性能分析工具-jvisualvm</title>
+      <link href="/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/"/>
+      <url>/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/</url>
       
-        <content type="html"><![CDATA[<p>JDK自带的图形化分析工具，可以链接本地和远程的服务</p><p>位置：jdk1.8.0_301\bin\jconsole.exe</p><p>windows查看端口对应的进程：</p><pre class="line-numbers language-none"><code class="language-none">C:\&gt;netstat -ano | findstr "9083"  TCP    0.0.0.0:9083           0.0.0.0:0              LISTENING       35720  TCP    [::]:9083              [::]:0                 LISTENING       35720C:\&gt;tasklist | findstr 35720java.exe                     35720 Console                    1    736,804 K<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><ol><li>打开后，本地进程列表没有数据</li></ol><p>打开文件夹：C:\Users\Iseven.yang\AppData\Local\Temp\hsperfdata_Iseven.yang</p><p>空白处“右键”-&gt;“属性”-&gt;“安全”-&gt;“编辑”-&gt;选择当前用户-&gt;下方勾选“完全控制”中的“允许”-&gt;“确定”</p><p>重启jconsole，重启java服务</p><ol start="2"><li>本地进程列表中的进程显示灰色，提示“未对此进程启用管理代理”</li></ol><p>在启动配置里，VM options中添加参数</p><pre class="line-numbers language-none"><code class="language-none">-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=19083-Dcom.sun.management.jmxremote.ssl=false  -Dcom.sun.management.jmxremote.authenticate=false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>打开jconsole，选择远程进程</p><p>输入：127.0.0.1:19083 后点连接</p>]]></content>
+        <content type="html"><![CDATA[<p>位置：jdk1.8.0_301\bin\jvisualvm.exe</p><h2 id="1-远程监控"><a href="#1-远程监控" class="headerlink" title="1. 远程监控"></a>1. 远程监控</h2><ul><li><p>监控远程服务需要在服务器上启动jstatd服务</p></li><li><p>找一个随意文件夹，创建文件，并添加内容</p><ul><li>touch jstatd.all.policy</li></ul><pre class="line-numbers language-none"><code class="language-none">grant codebase "file:${java.home}/../lib/tools.jar" {     permission java.security.AllPermission;  };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>启动jstatd</p><ul><li>jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.10.66 &amp;</li></ul></li><li><p>本地启动jvisualvm，添加远程</p><ul><li>输入主机ip</li></ul></li></ul><h2 id="2-问题："><a href="#2-问题：" class="headerlink" title="2. 问题："></a>2. 问题：</h2><ol><li>打开提示“无法监视本地JAVA应用程序”<ul><li>关闭所有Java程序</li><li>按Win + R，然后输入：%TMP%；</li><li>找到hsperfdata_开头的文件夹，把后面的系统名中大写改成小写</li><li>实在不行，把hsperfdata_开头的文件删了，再重启java程序</li></ul></li></ol>]]></content>
       
       
       <categories>
@@ -2143,11 +2118,11 @@
     
     
     <entry>
-      <title>性能分析工具-jvisualvm</title>
-      <link href="/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/"/>
-      <url>/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/</url>
+      <title>性能分析工具-Jconsole</title>
+      <link href="/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/"/>
+      <url>/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/</url>
       
-        <content type="html"><![CDATA[<p>位置：jdk1.8.0_301\bin\jvisualvm.exe</p><h2 id="1-远程监控"><a href="#1-远程监控" class="headerlink" title="1. 远程监控"></a>1. 远程监控</h2><ul><li><p>监控远程服务需要在服务器上启动jstatd服务</p></li><li><p>找一个随意文件夹，创建文件，并添加内容</p><ul><li>touch jstatd.all.policy</li></ul><pre class="line-numbers language-none"><code class="language-none">grant codebase "file:${java.home}/../lib/tools.jar" {     permission java.security.AllPermission;  };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>启动jstatd</p><ul><li>jstatd -J-Djava.security.policy=jstatd.all.policy -J-Djava.rmi.server.hostname=192.168.10.66 &amp;</li></ul></li><li><p>本地启动jvisualvm，添加远程</p><ul><li>输入主机ip</li></ul></li></ul><h2 id="2-问题："><a href="#2-问题：" class="headerlink" title="2. 问题："></a>2. 问题：</h2><ol><li>打开提示“无法监视本地JAVA应用程序”<ul><li>关闭所有Java程序</li><li>按Win + R，然后输入：%TMP%；</li><li>找到hsperfdata_开头的文件夹，把后面的系统名中大写改成小写</li><li>实在不行，把hsperfdata_开头的文件删了，再重启java程序</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>JDK自带的图形化分析工具，可以链接本地和远程的服务</p><p>位置：jdk1.8.0_301\bin\jconsole.exe</p><p>windows查看端口对应的进程：</p><pre class="line-numbers language-none"><code class="language-none">C:\&gt;netstat -ano | findstr "9083"  TCP    0.0.0.0:9083           0.0.0.0:0              LISTENING       35720  TCP    [::]:9083              [::]:0                 LISTENING       35720C:\&gt;tasklist | findstr 35720java.exe                     35720 Console                    1    736,804 K<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><ol><li>打开后，本地进程列表没有数据</li></ol><p>打开文件夹：C:\Users\Iseven.yang\AppData\Local\Temp\hsperfdata_Iseven.yang</p><p>空白处“右键”-&gt;“属性”-&gt;“安全”-&gt;“编辑”-&gt;选择当前用户-&gt;下方勾选“完全控制”中的“允许”-&gt;“确定”</p><p>重启jconsole，重启java服务</p><ol start="2"><li>本地进程列表中的进程显示灰色，提示“未对此进程启用管理代理”</li></ol><p>在启动配置里，VM options中添加参数</p><pre class="line-numbers language-none"><code class="language-none">-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=19083-Dcom.sun.management.jmxremote.ssl=false  -Dcom.sun.management.jmxremote.authenticate=false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>打开jconsole，选择远程进程</p><p>输入：127.0.0.1:19083 后点连接</p>]]></content>
       
       
       <categories>
@@ -2567,9 +2542,9 @@
       
         <tags>
             
-            <tag> Mybatis </tag>
-            
             <tag> Mybatis-plus </tag>
+            
+            <tag> Mybatis </tag>
             
         </tags>
       

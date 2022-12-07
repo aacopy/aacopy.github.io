@@ -63,7 +63,6 @@ https://www.aacopy.cn/kafka/kafka-shi-wu-xiao-xi/
 https://www.aacopy.cn/kafka/kafka-gao-xing-neng-zong-jie/
 https://www.aacopy.cn/kafka/kafka-xiao-xi-ke-kao-xing/
 https://www.aacopy.cn/util/vb-excel-fa-song-you-jian/
-https://www.aacopy.cn/springboot/springboot-configurationproperties/
 https://www.aacopy.cn/kafka/kafka-adminapi/
 https://www.aacopy.cn/kafka/kafka-xiao-fei-zhe/
 https://www.aacopy.cn/kafka/kafka-sheng-chan-zhe/
@@ -80,8 +79,8 @@ https://www.aacopy.cn/flowable/flowable-ui/
 https://www.aacopy.cn/docker/docker-compose/
 https://www.aacopy.cn/flowable/flowable-shu-ju-ku-biao/
 https://www.aacopy.cn/docker/win10-an-zhuang-docker/
-https://www.aacopy.cn/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/
 https://www.aacopy.cn/xing-neng/xing-neng-fen-xi-gong-ju-jvisualvm/
+https://www.aacopy.cn/xing-neng/xing-neng-fen-xi-gong-ju-jconsole/
 https://www.aacopy.cn/xing-neng/ya-ce-gong-ju-jmeter/
 https://www.aacopy.cn/mysql/mysql-bei-fen/
 https://www.aacopy.cn/util/aspose-project/
@@ -98,3 +97,4 @@ https://www.aacopy.cn/drools/drools-dong-tai-jia-zai-gui-ze/
 https://www.aacopy.cn/mysql/mysql-dml/
 https://www.aacopy.cn/flowable/flowable-zi-ding-yi-gui-ze-yin-qing/
 https://www.aacopy.cn/mybatis/mybatis-plus-duo-shu-ju-yuan/
+https://www.aacopy.cn/flowable/flowable-zi-ding-yi-shu-xing/
